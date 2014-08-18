@@ -39,87 +39,15 @@
 		$(document).ready(function() {
 			$( 'body' ).responsiveVideo();
 		});
-		
 		</script>
-
-		
-		<style>
-        * {
-          font-family: Arial, sans;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          -moz-box-sizing: border-box;
-        }
-        h1, h2 {
-          margin: 1em 0 0 0;
-          text-align: center;
-        }
-        h2 {
-          margin: 0 0 1em 0;
-        }
-        #container {
-          margin: 0 auto;
-          width: 50%;
-        }
-        #accordion input {
-          display: none;
-        }
-        #accordion label {
-          background: #eee;
-          border-radius: .25em;
-          cursor: pointer;
-          display: block;
-          margin-bottom: .125em;
-          padding: .25em 1em;
-          z-index: 20;
-        }
-        #accordion label:hover {
-          background: #ccc;
-        }
-        #accordion input:checked + label {
-          background: #ccc;
-          border-bottom-right-radius: 0;
-          border-bottom-left-radius: 0;
-          color: white;
-          margin-bottom: 0;
-        }
-        #accordion article {
-          background: #f7f7f7;
-          height:0px;
-          overflow:hidden;
-          z-index:10;
-        }
-        #accordion article p {
-          padding: 1em;
-        }
-        #accordion input:checked ~ article {
-         border-bottom-left-radius: .25em;
-         border-bottom-right-radius: .25em;
-         height: auto;
-         margin-bottom: .125em;
-        }
-		
-		#izquierda {
-		 float:left;
-		 padding-left:1em;
-		}
-		
-		#derecha {
-		 float:left;
-		 padding-left:1em;
-		}
-       </style>
-	   
-	   
-	   <noscript>
+        
+        <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		
-		</head>
+	</head>
 	<body>
 
 		<!-- Header -->
@@ -159,13 +87,10 @@
                 
                 
                 <h3>Videos C<span style="font-variant:small-caps; font-size:120%">onabio</span></h3>
-				
-				
-					<section id="accordion">
-					  <div>
-						<input type="radio" name="accordion-group" id="option-1" />
-						<label for="option-1">En busca de los  ingredientes y las recetas tradicionales</label>
-						<div class="row double">
+
+                    <!-- v1 -->
+					<p><strong>En busca de los  ingredientes y las recetas tradicionales</strong></p>
+                    <div class="row double">
 						<div class="6u">
 							<div id="content">
 									<article>
@@ -183,32 +108,52 @@
 						  </div>
 						</div>
 					</div>
-					
-					                               
-					  </div>
-					  <div>
-						<input type="radio" name="accordion-group" id="option-2" />
-						<label for="option-2">Rancho Quinta Diana, árboles y cultivos</label>
-						<article>
-							<p>(20 minutos)</p>
-							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-							<p>(27 minutos)</p>
-							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-						</article>
-					  </div>
-					  <div>
-						<input type="radio" name="accordion-group" id="option-3" />
-						<label for="option-3">El chile, pilar de la comida tradicional mexicana</label>
-						<article>
-							<p>(20 minutos)</p>
-							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-							<p>(25 minutos)</p>
-							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-						</article>
-					  </div>
-				</section>
-
-
+                    
+                    
+                    <!-- v2 -->
+                    <p style="padding-bottom:1.3em"> </p>
+					<p><strong>Rancho Quinta Diana, árboles y cultivos</strong></p>
+                    <div class="row double">
+						<div class="6u">
+							<div id="content">
+									<article>
+                                        <p>(20 minutos)</p>
+                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    </article>
+							</div>
+						</div>
+						<div class="6u">
+						  <div id="content">
+                             		<article>
+                                        <p>(27 minutos)</p>
+                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+                                	</article>                               
+						  </div>
+						</div>
+					</div>
+                    
+                    
+                    <!-- v3 -->
+                     <p style="padding-bottom:1.3em"> </p>
+					 <p><strong>El chile, pilar de la comida tradicional mexicana</strong></p>
+                    <div class="row double">
+						<div class="6u">
+							<div id="content">
+									<article>
+                                        <p>(20 minutos)</p>
+                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    </article>
+							</div>
+						</div>
+						<div class="6u">
+						  <div id="content">
+                             		<article>
+                                        <p>(25 minutos)</p>
+                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+                                	</article>                               
+						  </div>
+						</div>
+					</div>
                     
 					<p></p>
                     <hr>
