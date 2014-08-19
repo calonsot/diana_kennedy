@@ -39,15 +39,87 @@
 		$(document).ready(function() {
 			$( 'body' ).responsiveVideo();
 		});
+		
 		</script>
-        
-        <noscript>
+
+		
+		<style>
+        * {
+          font-family: Arial, sans;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+        }
+        h1, h2 {
+          margin: 1em 0 0 0;
+          text-align: center;
+        }
+        h2 {
+          margin: 0 0 1em 0;
+        }
+        #container {
+          margin: 0 auto;
+          width: 50%;
+        }
+        #accordion input {
+          display: none;
+        }
+        #accordion label {
+          background: #eee;
+          border-radius: .25em;
+          cursor: pointer;
+          display: block;
+          margin-bottom: .125em;
+          padding: .25em 1em;
+          z-index: 20;
+        }
+        #accordion label:hover {
+          background: #ccc;
+        }
+        #accordion input:checked + label {
+          background: #ccc;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          color: white;
+          margin-bottom: 0;
+        }
+        #accordion article {
+          background: #f7f7f7;
+          height:0px;
+          overflow:hidden;
+          z-index:10;
+        }
+        #accordion article p {
+          padding: 1em;
+        }
+        #accordion input:checked ~ article {
+         border-bottom-left-radius: .25em;
+         border-bottom-right-radius: .25em;
+         height: auto;
+         margin-bottom: .125em;
+        }
+		
+		#izquierda {
+		 float:left;
+		 padding-left:1em;
+		}
+		
+		#derecha {
+		 float:left;
+		 padding-left:1em;
+		}
+       </style>
+	   
+	   
+	   <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
+		
+		</head>
 	<body>
 
 		<!-- Header -->
@@ -58,7 +130,7 @@
               <div id="logo">
                 <img src="images/logo.png" usemap="#Map">
                 <map name="Map">
-                  <area shape="rect" coords="36,5,357,75" href="index.html">
+                  <area shape="rect" coords="36,5,357,75" href="index.php">
                   <area shape="rect" coords="674,3,762,73" href="http://www.conabio.gob.mx" target="_blank">
                 </map>
               </div>
@@ -66,11 +138,11 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Inicio</a></li>
-							<li><a href="qs_dk.html">¿Quién es DK?</a></li>
-							<li><a href="quinta.html">Quinta</a></li>
-							<li><a href="proyecto.html">Proyecto</a></li>
-							<li class="current"><a href="recursos.html">Recursos</a></li>
+							<li><a href="index.php">Inicio</a></li>
+							<li><a href="qs_dk.php">¿Quién es DK?</a></li>
+							<li><a href="quinta.php">Quinta</a></li>
+							<li><a href="proyecto.php">Proyecto</a></li>
+							<li class="current"><a href="recursos.php">Recursos</a></li>
 							<li><input name="Buscar" type="text" value="Buscar...">
 						  </li>
 						</ul>
@@ -87,73 +159,46 @@
                 
                 
                 <h3>Videos C<span style="font-variant:small-caps; font-size:120%">onabio</span></h3>
+				
+				
+					<section id="accordion">
+					  <div>
+						<input type="radio" name="accordion-group" id="option-1" />
+						<label for="option-1">En busca de los  ingredientes y las recetas tradicionales</label>
+						<article>
+							<div id="izquierda">
+							<p>(20 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div id="derecha">
+							<p>(30 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</article>                               
+					  </div>
+					  <div>
+						<input type="radio" name="accordion-group" id="option-2" />
+						<label for="option-2">Rancho Quinta Diana, árboles y cultivos</label>
+						<article>
+							<p>(20 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+							<p>(27 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+						</article>
+					  </div>
+					  <div>
+						<input type="radio" name="accordion-group" id="option-3" />
+						<label for="option-3">El chile, pilar de la comida tradicional mexicana</label>
+						<article>
+							<p>(20 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+							<p>(25 minutos)</p>
+							<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+						</article>
+					  </div>
+				</section>
 
-                    <!-- v1 -->
-					<p><strong>En busca de los  ingredientes y las recetas tradicionales</strong></p>
-                    <div class="row double">
-						<div class="6u">
-							<div id="content">
-									<article>
-                                        <p>(20 minutos)</p>
-										<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                    </article>
-							</div>
-						</div>
-						<div class="6u">
-						  <div id="content">
-                             		<article>
-                                        <p>(30 minutos)</p>
-                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                	</article>                               
-						  </div>
-						</div>
-					</div>
-                    
-                    
-                    <!-- v2 -->
-                    <p style="padding-bottom:1.3em"> </p>
-					<p><strong>Rancho Quinta Diana, árboles y cultivos</strong></p>
-                    <div class="row double">
-						<div class="6u">
-							<div id="content">
-									<article>
-                                        <p>(20 minutos)</p>
-                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                    </article>
-							</div>
-						</div>
-						<div class="6u">
-						  <div id="content">
-                             		<article>
-                                        <p>(27 minutos)</p>
-                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                	</article>                               
-						  </div>
-						</div>
-					</div>
-                    
-                    
-                    <!-- v3 -->
-                     <p style="padding-bottom:1.3em"> </p>
-					 <p><strong>El chile, pilar de la comida tradicional mexicana</strong></p>
-                    <div class="row double">
-						<div class="6u">
-							<div id="content">
-									<article>
-                                        <p>(20 minutos)</p>
-                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                    </article>
-							</div>
-						</div>
-						<div class="6u">
-						  <div id="content">
-                             		<article>
-                                        <p>(25 minutos)</p>
-                                        <iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
-                                	</article>                               
-						  </div>
-						</div>
-					</div>
+
                     
 					<p></p>
                     <hr>
