@@ -707,11 +707,11 @@
 		background-size: cover;
 		height: 14em;
 		text-align: center;
-		position: relative;
+		/*position: relative;*/
 	}
 
 		#banner header {
-			position: absolute;
+			/*position: absolute;*/		
 			bottom: 0;
 			left: 0;
 			width: 100%;
@@ -841,6 +841,46 @@
 			font-size: 0.9em;
 		}
 	
+	/* Busqueda */
+
+		#suggestions {
+			width:400px;
+			height:280px;
+			overflow: auto;
+		}
+
+		.active-links {
+			/*position:relative;
+			right:150px;
+			top:0;*/
+		}
+
+		#signin-dropdown {
+			background-color:#606060;
+			border-bottom-left-radius:5px;
+			border-bottom-right-radius:5px;
+			box-shadow:0 1px 2px #900000;
+			-webkit-box-shadow: 0 1px 2px #900000;
+			min-height:200px;
+			min-width:160px;
+			position:absolute;
+			right:0;
+			display:none;
+		}
+
+		#signin-dropdown form{
+			cursor:pointer;
+			padding:10px;
+			text-align:left;
+		}
+
+		.suggestelement {
+			margin-left:15px;
+			margin-top:5px;
+			width:350px;
+			cursor:pointer;
+		}
+
 	
 	/* Tabla */
 	
