@@ -8,7 +8,7 @@
 
 	$filtro = $_GET["filtro"];			
 	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
-	//Conexión a la base de datos 
+	//Conexión a la base de datos-calonso 
 	$con = $conexion; 	
 
 	//Sentencia sql (sin limit) 
