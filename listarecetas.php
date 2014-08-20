@@ -8,7 +8,7 @@
 
 	$filtro = $_GET["filtro"];			
 	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
-	//Conexión a la base de datos-calonso 
+	//Conexión a la base de datos 
 	$con = $conexion; 	
 
 	//Sentencia sql (sin limit) 
@@ -241,7 +241,7 @@
                 <header>
 						<h3 align="right"><?php 
 											if ($_pagi_totalReg <=5)
-												echo " <span class=fuente8><b>Se encontraron $_pagi_totalReg recetas.</b></span>";
+												echo "Se encontraron $_pagi_totalReg recetas.";
 											else
 						                    	echo $_pagi_info; 
 						                  ?></h3>
@@ -256,7 +256,7 @@
 					{ 							
 						echo "<li>";
 						$row['recetanombre']=htmlentities($row['recetanombre']);
-						echo "<h2><a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></h2>";
+						echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 					    echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
 					    echo "</li>";
 					    $i += 1;

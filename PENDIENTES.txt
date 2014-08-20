@@ -1,6 +1,8 @@
 PENDIENTES DE LA APGINA DE DIANA KENNEDY
 
-Poner un header y un footer en las todas las vistas para no repetir codigo comun.
+Poner un header y un footer en las todas las vistas para no repetir codigo común.
 Cuando la pantalla se hace chica el buscador desaparece (probablemente javascript).
 Cuando la pagina carga, el buscador esta en modo de busqueda avanzada, ocultarlo a la busqueda basica por default.
-Cambiar la codificacion de las vistas a UTF-8 ya que la base tiene esa codificacion y los simbolos con acentos se decodifican mal.
+Cambiar la codificacion de las vistas a UTF-8 ya que la base tiene esa codificacion y los símbolos con acentos se decodifican mal.
+Al abrir una recete (PDF) y realizar un resize de la pantalla, se queda fijo el documento y tapa el menú en caso de desplegarlo.
+
