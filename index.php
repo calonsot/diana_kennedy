@@ -1,14 +1,13 @@
+<!DOCTYPE HTML>
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-header( 'Content-type: text/html; charset=utf-8' );
+header( 'Content-type: text/html; charset=iso-8859-1' );
 require('config.php');
 ?>
 
 <html>
 	<head>
 		<title>Diana Kennedy | Biodiversidad Mexicana | Conabio</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
@@ -24,66 +23,8 @@ require('config.php');
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function () {
-			
-			//Mostramos u ocultamos el panel de busqueda avanzada
-			$('.active-links').click(function () {			
-				$('#suggestions').fadeIn(1).html("limpia");
-				$('#suggestions').fadeOut(1);
-		        if ($('#signin-dropdown').is(":visible")) {
-		            $('#signin-dropdown').hide()
-					$('#session').removeClass('active');
-		        } else {
-		            $('#signin-dropdown').show()
-					$('#session').addClass('active');
-		        }
-				return false;
-		    });
-			
-			$('#signin-dropdown').click(function(e) {		
-		        e.stopPropagation();
-		    });
-		    
-		    $(document).click(function() {    	
-		        $('#signin-dropdown').hide();
-				$('#session').removeClass('active');		
-		    });
-
-			//Al escribir dentro del input con id="service"
-			$('#ingrediente').keypress(function(e){
-			    //Obtenemos el value del input
-			    var service = $(this).val();
-			    var dataString = 'ingrediente='+service+String.fromCharCode(e.keyCode);	      
-
-			    //Le pasamos el valor del input al ajax
-			    $.ajax({
-			        type: "POST",
-			        url: "autocomplete.php",
-			        data: dataString,
-			        success: function(data) {
-
-			            //Escribimos las sugerencias que nos manda la consulta
-			            $('#suggestions').fadeIn(1000).html(data);
-			            //Al hacer click en alguna de las sugerencias
-			            $('.suggestelement').click(function(e)
-			            {		            
-				            //Obtenemos la id unica de la sugerencia pulsada	                    
-				            var id = $(this).attr('id');	                    
-				            //Editamos el valor del input con data de la sugerencia pulsada
-				            $('#ingrediente').val($('#'+id).attr('data'));
-				            //Hacemos desaparecer el resto de sugerencias
-				            $('#suggestions').fadeOut(100);
-				            //Mostramos
-				            //alert('Has seleccionado el '+id+' '+$('#'+id).attr('data'));
-							return false;
-			            });              
-			        }
-			    });
-			});
-
-		});
-		</script>
+		<script src="js/menu.js"></script>
+		
 	</head>
 	<body><!-- Header -->
 			<div id="header">
@@ -101,7 +42,7 @@ require('config.php');
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">&iquest;Qui&eacute;n es DK?</a></li>
+							<li><a href="qs_dk.php">¿Quién es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>							
@@ -132,7 +73,7 @@ require('config.php');
 										<br>
 							         	<label><span>Ingrediente</span></label>
 								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions" class="suggestelement"></div>	   			
+									   	<div id="suggestions"></div>	   			
 
 								        <label><span>Estado</span></label>
 								        <select name="estados" id="estados">
@@ -151,7 +92,7 @@ require('config.php');
 
 										<br><br>
 
-							           	<right><button type="submit" class="button">Buscar receta</button></right>
+							           	<center><button type="submit">Buscar receta</button></center>
 
 						        	</div>
 						        </div>
@@ -175,10 +116,6 @@ require('config.php');
 					<h2>&quot;La cocina encuentra su riqueza en los ingredientes&quot;</h2>
 				</header>
 			</section>
-
-
-								
-		
 
 		<!-- Posts -->
 			<section class="wrapper style1">
@@ -245,7 +182,7 @@ require('config.php');
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 Comisi&oacute;n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->
