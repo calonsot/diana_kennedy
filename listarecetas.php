@@ -224,7 +224,7 @@
 
                     <br><br>
 
-                          <center><button type="submit">Buscar receta</button></center>
+                          <right><button type="submit" class="button">Buscar receta</button></right>
 
                       </div>
                     </div>

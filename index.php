@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -102,7 +101,7 @@ require('config.php');
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">�Qui�n es DK?</a></li>
+							<li><a href="qs_dk.php">&iquest;Qui&eacute;n es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>							
@@ -133,7 +132,7 @@ require('config.php');
 										<br>
 							         	<label><span>Ingrediente</span></label>
 								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions"></div>	   			
+									   	<div id="suggestions" class="suggestelement"></div>	   			
 
 								        <label><span>Estado</span></label>
 								        <select name="estados" id="estados">
@@ -152,7 +151,7 @@ require('config.php');
 
 										<br><br>
 
-							           	<center><button type="submit">Buscar receta</button></center>
+							           	<right><button type="submit" class="button">Buscar receta</button></right>
 
 						        	</div>
 						        </div>
@@ -246,7 +245,7 @@ require('config.php');
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 Comisi�n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 Comisi&oacute;n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->

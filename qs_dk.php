@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
 header( 'Content-type: text/html; charset=iso-8859-1' );
 require('config.php');
@@ -152,7 +151,7 @@ require('config.php');
 
 										<br><br>
 
-							           	<center><button type="submit">Buscar receta</button></center>
+							           	<right><button type="submit" class="button">Buscar receta</button></right>
 
 						        	</div>
 						        </div>
