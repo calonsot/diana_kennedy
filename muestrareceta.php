@@ -144,7 +144,7 @@
 			<section class="wrapper style1">
 				<div class="container">
                 <header>
-						<h2><?php echo "Receta - ".$nombrereceta; ?></h2>
+						<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
 				</header>
                 
 				<?php 					

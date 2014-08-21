@@ -181,12 +181,12 @@
 			<section class="wrapper style1">
 				<div class="container">
                 <header>
-						<h3 align="right"><?php 
+						<h4 align="center"><?php 
 											if ($_pagi_totalReg <=5)
 												echo " <span class=fuente8><b>Se encontraron $_pagi_totalReg recetas.</b></span>";
 											else
 						                    	echo $_pagi_info; 
-						                  ?></h3>
+						                  ?></h4>
 				</header>
 
 				<?php 					
@@ -198,7 +198,7 @@
 					{ 							
 						echo "<li>";
 						$row['recetanombre']=htmlentities($row['recetanombre']);
-						echo "<h2><a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></h2>";
+						echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 					    echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
 					    echo "</li>";
 					    $i += 1;

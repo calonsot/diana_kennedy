@@ -93,7 +93,7 @@ require('config.php');
 
 										<br><br>
 
-							           	<center><button type="submit">Buscar receta</button></center>
+							           	<right><button type="submit" class="button">Buscar receta</button></right>
 
 						        	</div>
 						        </div>
@@ -145,10 +145,10 @@ require('config.php');
 							  <h3>Libros</h3>
                                         <table class="header">
 										  <tr>
-										    <td valign="top">A&ntilde;o</td>
-										    <td valign="top">Ingl&eacute;s</td>
-										    <td valign="top">A&ntilde;o</td>
-										    <td valign="top">Espa&ntilde;ol</td>
+										    <td width="15%" valign="top">A&ntilde;o</td>
+										    <td width="30%" valign="top">Ingl&eacute;s</td>
+										    <td width="15%" valign="top">A&ntilde;o</td>
+										    <td width="30%" valign="top">Espa&ntilde;ol</td>
 									      </tr>
 										  <tr>
 										    <td valign="top"><strong>1972, 1986</strong></td>
