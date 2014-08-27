@@ -758,6 +758,7 @@
 
 		.wrapper.style1 {
 			background: #fff;
+			z-index:10;
 		}
 
 		.wrapper.style2 {
@@ -861,18 +862,19 @@
 		}
 
 		#signin-dropdown {
-	background-color: rgba(90,0,0,0.8);
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	box-shadow: 0 1px 2px #900000;
-	-webkit-box-shadow: 0 1px 2px #900000;
-	min-height: 200px;
-	min-width: 160px;
-	position: absolute;
-	right: 0;
-	display: none;
-	padding-left:10px; padding-bottom:10px;
-	z-index:1;
+		background-color: rgba(90,0,0,0.8);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: 0 1px 2px #900000;
+		-webkit-box-shadow: 0 1px 2px #900000;
+		min-height: 200px;
+		min-width: 160px;
+		position: absolute;
+		right: 0;
+		display: none;
+		padding-left:10px; padding-bottom:10px;
+		z-index:20;
+		
 		}
 
 		#signin-dropdown form{

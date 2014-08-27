@@ -108,7 +108,7 @@
               <div id="logo">
                 <img src="images/logo.png" usemap="#Map">
                 <map name="Map">
-                  <area shape="rect" coords="36,5,357,75" href="index.html">
+                  <area shape="rect" coords="36,5,357,75" href="index.php">
                   <area shape="rect" coords="674,3,762,73" href="http://www.conabio.gob.mx" target="_blank">
                 </map>
               </div>
