@@ -5,4 +5,3 @@ ini_set('display_errors', 1);
 $conexion = @mysql_connect("tu_servidor", "usuario", "tu_passwd") or die ("Fallo en el establecimiento de la conexión");
 mysql_select_db('diannabd') or die("Error en la selección de la base de datos");
 mysql_query("SET NAMES 'utf8'");
-

@@ -25,66 +25,7 @@ require('config.php');
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function () {
-			
-			//Mostramos u ocultamos el panel de busqueda avanzada
-			$('.active-links').click(function () {			
-				$('#suggestions').fadeIn(1).html("limpia");
-				$('#suggestions').fadeOut(1);
-		        if ($('#signin-dropdown').is(":visible")) {
-		            $('#signin-dropdown').hide()
-					$('#session').removeClass('active');
-		        } else {
-		            $('#signin-dropdown').show()
-					$('#session').addClass('active');
-		        }
-				return false;
-		    });
-			
-			$('#signin-dropdown').click(function(e) {		
-		        e.stopPropagation();
-		    });
-		    
-		    $(document).click(function() {    	
-		        $('#signin-dropdown').hide();
-				$('#session').removeClass('active');		
-		    });
-
-			//Al escribir dentro del input con id="service"
-			$('#ingrediente').keypress(function(e){
-			    //Obtenemos el value del input
-			    var service = $(this).val();
-			    var dataString = 'ingrediente='+service+String.fromCharCode(e.keyCode);	      
-
-			    //Le pasamos el valor del input al ajax
-			    $.ajax({
-			        type: "POST",
-			        url: "autocomplete.php",
-			        data: dataString,
-			        success: function(data) {
-
-			            //Escribimos las sugerencias que nos manda la consulta
-			            $('#suggestions').fadeIn(1000).html(data);
-			            //Al hacer click en alguna de las sugerencias
-			            $('.suggestelement').click(function(e)
-			            {		            
-				            //Obtenemos la id unica de la sugerencia pulsada	                    
-				            var id = $(this).attr('id');	                    
-				            //Editamos el valor del input con data de la sugerencia pulsada
-				            $('#ingrediente').val($('#'+id).attr('data'));
-				            //Hacemos desaparecer el resto de sugerencias
-				            $('#suggestions').fadeOut(100);
-				            //Mostramos
-				            //alert('Has seleccionado el '+id+' '+$('#'+id).attr('data'));
-							return false;
-			            });              
-			        }
-			    });
-			});
-
-		});
-		</script>
+		<script src="js/menu.js"></script>
 	</head>
 	<body><!-- Header -->
 			<div id="header">
@@ -107,57 +48,7 @@ require('config.php');
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>							
 							<li>
-						        <form method="post" action="recetas.php">	
-						        
-						        <div class="active-links">
-						        	
-						        	<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                    	       
-						               
-						        	<div id="signin-dropdown" align="left">        		
-						        	            
-										<label><span>Categor&iacute;a</span></label>
-								        <select name="categoria" id="categoria">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);	
-												// Voy imprimiendo el select de nomcategoria
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-										
-										<br>
-							         	<label><span>Ingrediente</span></label>
-								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions" class="suggestelement"></div>	   			
-
-								        <label><span>Estado</span></label>
-								        <select name="estados" id="estados">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion);	
-												// Voy imprimiendo el select de estado
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-
-										<br><br>
-
-							           	<right><button type="submit" class="button">Buscar receta</button></right>
-
-						        	</div>
-						        </div>
-						   		
-						   		</form>
+						        <?php include('menu.php') ?>
 						    </li>						
 						</ul>
 			  </nav>

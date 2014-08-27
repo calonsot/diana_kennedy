@@ -7,42 +7,42 @@
 	require('config.php');
 
 	$filtro = $_GET["filtro"];			
-	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
-	//Conexión a la base de datos 
+	$sql = "SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
+	//ConexiÃ³n a la base de datos 
 	$con = $conexion; 	
 
 	//Sentencia sql (sin limit) 
 	$_pagi_sql = $sql; 
 
-	//cantidad de resultados por página (opcional, por defecto 20) 
+	//cantidad de resultados por pÃ¡gina (opcional, por defecto 20) 
 	$_pagi_cuantos = 10; 
 
-	//cantidad de enlaces que se mostrarán como máximo en la barra de navegación
+	//cantidad de enlaces que se mostrarÃ¡n como mÃ¡ximo en la barra de navegaciÃ³n
 	$_pagi_nav_num_enlaces = 10;
 	 
 	//Decidimos si queremos que se muesten los errores de mysql
-	$_pagi_mostrar_errores = true;//recomendado true sólo en tiempo de desarrollo.
+	$_pagi_mostrar_errores = true;//recomendado true sÃ³lo en tiempo de desarrollo.
 	 
 	//Si tenemos una consulta compleja que hace que el Paginator no funcione correctamente, 
 	//realizamos el conteo alternativo.
 	$_pagi_conteo_alternativo = true;//recomendado false.
 	 
-	//Supongamos que sólo nos interesa propagar estas dos variables
-	$_pagi_propagar = array("URL","recetanombre");//No importa si son POST o GET
+	//Supongamos que sÃ³lo nos interesa propagar estas dos variables
+	$_pagi_propagar = array("URL","recetanombre", "publico");//No importa si son POST o GET
 	 
-	//Definimos qué estilo CSS se utilizará para los enlaces de paginación.
+	//Definimos quÃ© estilo CSS se utilizarÃ¡ para los enlaces de paginaciÃ³n.
 	//El estilo debe estar definido previamente
 	$_pagi_nav_estilo = "paginacion";
 
-	//definimos qué irá en el enlace a la página anterior
-	$_pagi_nav_anterior = "&laquo; Anterior"; // &lt;";// podría ir un tag <img> o lo que sea
+	//definimos quÃ© irÃ¡ en el enlace a la pÃ¡gina anterior
+	$_pagi_nav_anterior = "&laquo; Anterior"; // &lt;";// podrÃ­a ir un tag <img> o lo que sea
 	 
-	//definimos qué irá en el enlace a la página siguiente
-	$_pagi_nav_siguiente = "Siguiente &raquo;"; //" &gt;";// podría ir un tag <img> o lo que sea
+	//definimos quÃ© irÃ¡ en el enlace a la pÃ¡gina siguiente
+	$_pagi_nav_siguiente = "Siguiente &raquo;"; //" &gt;";// podrÃ­a ir un tag <img> o lo que sea
 
 	$_pagi_htaccess = "";
 
-	//Incluimos el script de paginación. Éste ya ejecuta la consulta automáticamente 
+	//Incluimos el script de paginaciÃ³n. Ã‰ste ya ejecuta la consulta automÃ¡ticamente 
 	include("paginator.inc.php"); 
 ?>
 <html>
@@ -117,61 +117,11 @@
 					<nav id="nav">
 						<ul>
 							<li ><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">¿Quién es DK?</a></li>
+							<li><a href="qs_dk.php">Â¿QuiÃ©n es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li class="current"><a href="recursos.php">Recursos</a></li>
-							<li><form method="post" action="recetas.php"> 
-                    
-                    <div class="active-links">
-                      
-                      <input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                             
-                           
-                      <div id="signin-dropdown" align="left">           
-                                  
-                    <label><span>Categor&iacute;a</span></label>
-                        <select name="categoria" id="categoria">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);  
-                        // Voy imprimiendo el select de nomcategoria
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-                    
-                    <br>
-                        <label><span>Ingrediente</span></label>
-                        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-                      <div id="suggestions"></div>          
-
-                        <label><span>Estado</span></label>
-                        <select name="estados" id="estados">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion); 
-                        // Voy imprimiendo el select de estado
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-
-                    <br><br>
-
-                          <right><button type="submit" class="button">Buscar receta</button></right>
-
-                      </div>
-                    </div>
-                  
-                  </form></li>
+							<li> <?php include('menu.php') ?></li>
 						</ul>
 			  		</nav>
 
@@ -182,33 +132,60 @@
 				<div class="container">
                 <header>
 						<h4 align="center"><?php 
-											if ($_pagi_totalReg <=5)
+										      /*if ($_pagi_totalReg <=5)
 												echo " <span class=fuente8><b>Se encontraron $_pagi_totalReg recetas.</b></span>";
 											else
-						                    	echo $_pagi_info; 
+						                    	echo $_pagi_info;*/ 
 						                  ?></h4>
 				</header>
+		                <br>
+                                <br>
 
 				<?php 					
-					echo "<ul>";
+					echo "<div class='micaja'>";
 
-					//Leemos y escribimos los registros de la página actual 
+					//Leemos y escribimos los registros de la pÃ¡gina actual 
 					$i = 1;
+				        $bandera = true;
 					while($row = mysql_fetch_array($_pagi_result))
 					{ 							
-						echo "<li>";
-						$row['recetanombre']=htmlentities($row['recetanombre']);
-						echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
-					    echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
-					    echo "</li>";
+						if ($bandera == true)
+						{
+							$bandera = false;
+							echo "<div class='izq'>";
+							echo "<div class='micontenido'>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							if ($row['publico']==1)
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripciï¿½n... </p><br><br>";
+							else
+								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    echo "</div>";
+						    echo "</div>";							
+						}
+						else
+						{
+							$bandera = true;
+							echo "<div class='der'>";
+							echo "<div class='micontenido'>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+						    if ($row['publico']==1)
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripciï¿½n... </p><br><br>";
+							else
+								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    echo "</div>";
+						    echo "</div>";	
+						}
+		
 					    $i += 1;
 					    if ($i == 4)
 					    	$i = 1;
 					}
 
-					echo "</ul>";
+					echo "</div>";
 
-					//Incluimos la barra de navegación 
+					//Incluimos la barra de navegaciÃ³n 
 					echo"<center><p>".$_pagi_navegacion."</p></center>";
 					//echo"<p>Mostrando Registrados ".$_pagi_info."</p>";
 				?>                
@@ -220,7 +197,7 @@
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 ComisiÃ³n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->

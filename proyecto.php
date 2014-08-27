@@ -44,61 +44,11 @@ require('config.php');
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">¿Quién es DK?</a></li>
+							<li><a href="qs_dk.php">Â¿QuiÃ©n es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li class="current"><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>
-							<li> <form method="post" action="recetas.php"> 
-                    
-                    <div class="active-links">
-                      
-                      <input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                             
-                           
-                      <div id="signin-dropdown" align="left">           
-                                  
-                    <label><span>Categor&iacute;a</span></label>
-                        <select name="categoria" id="categoria">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);  
-                        // Voy imprimiendo el select de nomcategoria
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-                    
-                    <br>
-                        <label><span>Ingrediente</span></label>
-                        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-                      <div id="suggestions"></div>          
-
-                        <label><span>Estado</span></label>
-                        <select name="estados" id="estados">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion); 
-                        // Voy imprimiendo el select de estado
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-
-                    <br><br>
-
-                          <right><button type="submit" class="button">Buscar receta</button></right>
-
-                      </div>
-                    </div>
-                  
-                  </form>
+							<li> <?php include('menu.php') ?>
 						  </li>
 						</ul>
 			  </nav>
@@ -189,7 +139,7 @@ require('config.php');
                                 <h3>Visitas a mercados</h3>
                             		<span class="image featured"><img src="images/proyecto_dk4.jpg" alt="" /></span>
                             
-                            <p>En las visitas a mercados de 5 estados se colectaron muestras de 261 distintos ingredientes que se clasifican como “gastrotaxa”. Un gastrotaxon es una unidad taxonómica no-formal que se aplica a ingredientes vegetales autóctonos de una especie biológica, con características diagnósticas para separarla de otros gastro-taxa. Se aplica su nombre común utilizado localmente. Esto se debe a que se distinguen diferencias de forma, tamaño, color, sabor, etc., pero se desconoce si es una raza de una especie o si es una especie distinta.</p>
+                            <p>En las visitas a mercados de 5 estados se colectaron muestras de 261 distintos ingredientes que se clasifican como Â“gastrotaxaÂ”. Un gastrotaxon es una unidad taxonÃ³mica no-formal que se aplica a ingredientes vegetales autÃ³ctonos de una especie biolÃ³gica, con caracterÃ­sticas diagnÃ³sticas para separarla de otros gastro-taxa. Se aplica su nombre comÃºn utilizado localmente. Esto se debe a que se distinguen diferencias de forma, tamaÃ±o, color, sabor, etc., pero se desconoce si es una raza de una especie o si es una especie distinta.</p>
                             <table class="header">
                                           <tr>
                                             <td valign="top">Mercado</td>
@@ -226,19 +176,19 @@ require('config.php');
                                         </table>
 
                                      
-                                        <p>Los ingredientes autóctonos incluyen frijoles: negro, blanco, bayo, flor de mayo, ayocotes; calabaza, chilacayote, flor de calabaza, pepitas, calabacitas; chiles pasilla, ancho, poblano, chilaca, serrano, guajillo, jalapeño, ancho, cora, de árbol, cascabel, chipotle, amarillo, güero, colorado, miahuateco, mora, morita, chilpaya, habanero, amashito y pasilla mixe, entre otros. También hay xocoyoles, xoco, chaya, achiote, hoja blanca, hoja santa, cuajilote, chepiche, ahuahtli, chayote silvestre, flor de colorín, guaje, nopales, xoconostles, trompillos, orégano silvestre, papa silvestre y hongo azul, hongo clavito, hongo pata de pájaro y cuitlacoche. Asimismo se enlistaron algunos ingredientes animales como chicatanas, venado, jumiles, cazón, anguila, acamayas, bagre.</p>
+                                        <p>Los ingredientes autÃ³ctonos incluyen frijoles: negro, blanco, bayo, flor de mayo, ayocotes; calabaza, chilacayote, flor de calabaza, pepitas, calabacitas; chiles pasilla, ancho, poblano, chilaca, serrano, guajillo, jalapeÃ±o, ancho, cora, de Ã¡rbol, cascabel, chipotle, amarillo, gÃ¼ero, colorado, miahuateco, mora, morita, chilpaya, habanero, amashito y pasilla mixe, entre otros. TambiÃ©n hay xocoyoles, xoco, chaya, achiote, hoja blanca, hoja santa, cuajilote, chepiche, ahuahtli, chayote silvestre, flor de colorÃ­n, guaje, nopales, xoconostles, trompillos, orÃ©gano silvestre, papa silvestre y hongo azul, hongo clavito, hongo pata de pÃ¡jaro y cuitlacoche. Asimismo se enlistaron algunos ingredientes animales como chicatanas, venado, jumiles, cazÃ³n, anguila, acamayas, bagre.</p>
                                         
                                         <h3>Notas</h3>
                                         <span class="image featured"><img src="images/proyecto_dk5.jpg" alt="" /></span>
                                         <p>Se revisaron y transcribieron 688 notas de campo de Diana Kennedy de 15 estados. En sus notas Diana presenta comentarios sobre los mercados, las personas, el costo de ingredientes, listados de platillo locales, recetas con ingredientes locales y platillos poco convencionales.</p>
                                         
                                         
-                                        <h3>Fotografías</h3>
+                                        <h3>FotografÃ­as</h3>
                                         <span class="image featured"><img src="images/proyecto_dk6.jpg" alt="" /></span>
-                                        <p>Se escanearon diapositivas de Diana Kennedy sobre ingredientes, recorridos en mercados, procedimientos culinarios, plantas cultivadas en su huerto. Además se reunieron fotografías digitales y se consolidó un acervo fotográfico que consta de <a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">2,279 fotografías</a>, actualmente incluidas en el Banco de Imágenes de la CONABIO.</p>
+                                        <p>Se escanearon diapositivas de Diana Kennedy sobre ingredientes, recorridos en mercados, procedimientos culinarios, plantas cultivadas en su huerto. AdemÃ¡s se reunieron fotografÃ­as digitales y se consolidÃ³ un acervo fotogrÃ¡fico que consta de <a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">2,279 fotografÃ­as</a>, actualmente incluidas en el Banco de ImÃ¡genes de la CONABIO.</p>
                                           
-                                        <h3>Pérdida de ingredientes autóctonos</h3>
-                                        <p>La comparación de los ingredientes incluidos en las recetas de Diana Kennedy con los ingredientes documentados en los mercados muestra una reducción en la diversidad de ingredientes (tal vez debido en parte a la época de colecta). También se documentaron algunos ingredientes no colectados por Diana anteriormente. En los estados de Oaxaca, Puebla y Veracruz, la mayor parte de los ingredientes son cultivados, mientras que en Guerrero e Hidalgo, existe una proporción similar entre ingredientes cultivados y plantas silvestres.</p>
+                                        <h3>PÃ©rdida de ingredientes autÃ³ctonos</h3>
+                                        <p>La comparaciÃ³n de los ingredientes incluidos en las recetas de Diana Kennedy con los ingredientes documentados en los mercados muestra una reducciÃ³n en la diversidad de ingredientes (tal vez debido en parte a la Ã©poca de colecta). TambiÃ©n se documentaron algunos ingredientes no colectados por Diana anteriormente. En los estados de Oaxaca, Puebla y Veracruz, la mayor parte de los ingredientes son cultivados, mientras que en Guerrero e Hidalgo, existe una proporciÃ³n similar entre ingredientes cultivados y plantas silvestres.</p>
                                         
                                         <h3>Participantes</h3>
                       <p><strong>Diana Kennedy</strong><br>
@@ -263,8 +213,8 @@ require('config.php');
                     
                     <article>
                     <hr>
-                    <p><strong>Proyecto IE008:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=IE&Numero=8" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy- fase 1</a></p>
-                    <p><strong>Proyecto KX001:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=KX&Numero=1" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy-fase 2</a></p>
+                    <p><strong>Proyecto IE008:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=IE&Numero=8" target="_blank">DocumentaciÃ³n de la biodiversidad de la gastronomÃ­a mexicana: rescate de los archivos culinarios de Diana Kennedy- fase 1</a></p>
+                    <p><strong>Proyecto KX001:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=KX&Numero=1" target="_blank">DocumentaciÃ³n de la biodiversidad de la gastronomÃ­a mexicana: rescate de los archivos culinarios de Diana Kennedy-fase 2</a></p>
                     </article>
                     
 				</div>
@@ -275,7 +225,7 @@ require('config.php');
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 ComisiÃ³n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->
@@ -291,3 +241,4 @@ require('config.php');
 
 	</body>
 </html>
+

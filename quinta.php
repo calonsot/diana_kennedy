@@ -44,61 +44,11 @@ require('config.php');
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">øQuiÈn es DK?</a></li>
+							<li><a href="qs_dk.php">¬øQui√©n es DK?</a></li>
 							<li class="current"><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>
-							<li> <form method="post" action="recetas.php">	
-						        
-						        <div class="active-links">
-						        	
-						        	<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                    	       
-						               
-						        	<div id="signin-dropdown" align="left">        		
-						        	            
-										<label><span>Categor&iacute;a</span></label>
-								        <select name="categoria" id="categoria">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);	
-												// Voy imprimiendo el select de nomcategoria
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-										
-										<br>
-							         	<label><span>Ingrediente</span></label>
-								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions"></div>	   			
-
-								        <label><span>Estado</span></label>
-								        <select name="estados" id="estados">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion);	
-												// Voy imprimiendo el select de estado
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-
-										<br><br>
-
-							           	<right><button type="submit" class="button">Buscar receta</button></right>
-
-						        	</div>
-						        </div>
-						   		
-						   		</form>
+							<li> <?php include('menu.php') ?>
 						  </li>
 						</ul>
 			  </nav>
@@ -139,18 +89,18 @@ require('config.php');
 
                             <section>
                              	<h3>Huerto exterior</h3>
-                                        <p>El huerto exterior tiene alrededor de <strong>150</strong> especies incluyendo ·rboles como cacalosuchitl, durazno criollo, canastilla, capulÌn, guayaba criolla, lima agria, macadamia y nÌspero, arbustos como la yerba santa roja, hierbas como pimentÛn, tabaco silvestre, toronjil, chile de ·rbol, camote de coyote, azucenas amarilla, alfalfa silvestre, alcachofa y variedades de lechuga y jitomate, entre otras. TambiÈn hay enredaderas como el maracuy· y trepadoras como el chayote.</p>
+                                        <p>El huerto exterior tiene alrededor de <strong>150</strong> especies incluyendo √°rboles como cacalosuchitl, durazno criollo, canastilla, capul√≠n, guayaba criolla, lima agria, macadamia y n√≠spero, arbustos como la yerba santa roja, hierbas como piment√≥n, tabaco silvestre, toronjil, chile de √°rbol, camote de coyote, azucenas amarilla, alfalfa silvestre, alcachofa y variedades de lechuga y jitomate, entre otras. Tambi√©n hay enredaderas como el maracuy√° y trepadoras como el chayote.</p>
                                         
                                 <h3>Huerto interior</h3>
-                                        <p>En el huerto hay entre <strong>40 y 50</strong> especies, incluyendo plantas de ornato y plantas comestibles como flor de muerto, epazote criollo, epazote de ·rbol, orquÌdeas, granada japonesa y granada dulce, chirimoya, ar˙gula, tulip·n silvestre, albahaca, salvia, nopalillos: blanco, morado y rojo ,y noche buena criolla, dalia, romerillo, ortiga, mirto, entre otras.</p>
+                                        <p>En el huerto hay entre <strong>40 y 50</strong> especies, incluyendo plantas de ornato y plantas comestibles como flor de muerto, epazote criollo, epazote de √°rbol, orqu√≠deas, granada japonesa y granada dulce, chirimoya, ar√∫gula, tulip√°n silvestre, albahaca, salvia, nopalillos: blanco, morado y rojo ,y noche buena criolla, dalia, romerillo, ortiga, mirto, entre otras.</p>
                                         
                                 <span class="image featured"><img src="images/quinta_dk3.jpg" alt="" /></span>
                                 
                               <h3>Invernadero</h3>
-                                        <p>Hay oreja de leÛn, palma, cilantro extranjero, lima, pasiflorina, pl·tano de varios tipos, y chile manzano, habanero y dulce, entre otras.</p>
+                                        <p>Hay oreja de le√≥n, palma, cilantro extranjero, lima, pasiflorina, pl√°tano de varios tipos, y chile manzano, habanero y dulce, entre otras.</p>
                                         
-                               <h3>KanchÈ o canchÈ</h3>
-                                        <p>El kanchÈ es una estructura elevada de madera de origen maya, empleada para el cultivo de plantas. En ella se coloca de 15 a 20 cm de tierra con abonos org·nicos. En el kanchÈ de la Quinta Diana se cultivan fresas, berros y jitomates silvestres.</p>
+                               <h3>Kanch√© o canch√©</h3>
+                                        <p>El kanch√© es una estructura elevada de madera de origen maya, empleada para el cultivo de plantas. En ella se coloca de 15 a 20 cm de tierra con abonos org√°nicos. En el kanch√© de la Quinta Diana se cultivan fresas, berros y jitomates silvestres.</p>
                             </section>
 
 							</div>
@@ -158,8 +108,8 @@ require('config.php');
 					</div>
                     
                     <article>
-                    	<h3>Cat·logo de plantas Quinta Diana Kennedy (<a href="pdf/catalogo_plantas_qd.pdf" target="_blank" style="color:#900000">PDF</a>)</h3>
-                                        <p>Un resultado extra del proyecto fue la elaboraciÛn de un cat·logo con Ìndice de nombres comunes, nombres cientÌficos y fotografÌas de los ejemplares herborizados. Los ejemplares est·n depositados en el Herbario Nacional (MEXU) de la Universidad Nacional AutÛnoma de MÈxico.
+                    	<h3>Cat√°logo de plantas Quinta Diana Kennedy (<a href="pdf/catalogo_plantas_qd.pdf" target="_blank" style="color:#900000">PDF</a>)</h3>
+                                        <p>Un resultado extra del proyecto fue la elaboraci√≥n de un cat√°logo con √≠ndice de nombres comunes, nombres cient√≠ficos y fotograf√≠as de los ejemplares herborizados. Los ejemplares est√°n depositados en el Herbario Nacional (MEXU) de la Universidad Nacional Aut√≥noma de M√©xico.
 </p>
 
 					  <p>Diana tiene la iniciativa de crear el Centro Diana Kennedy para formalizar las lecciones de cocina mexicana.<br>
@@ -173,7 +123,7 @@ require('config.php');
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 ComisiÛn Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 Comisi√≥n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->
@@ -189,3 +139,4 @@ require('config.php');
 
 	</body>
 </html>
+

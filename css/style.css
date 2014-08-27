@@ -958,4 +958,28 @@
 
 
 	.hanging-indent { text-indent: -47px; padding-left: 47px; }
-	
+
+	.micaja {
+	    overflow: hidden;
+	}
+
+	.micontenido {
+	    font-size: 15px;
+	    line-height: 20px;
+	    padding: 0 20px;
+	    text-align: justify;
+	}
+
+	.izq {
+	    float: left;
+	    width: 50%;
+	}
+
+	.izq .micontenido {
+	    border-right: 5px solid #ffffff;
+	}
+
+	.der {
+	    float: right;
+	    width: 50%;
+	}
