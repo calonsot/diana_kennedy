@@ -79,78 +79,41 @@
 					<nav id="nav">
 						<ul>
 							<li ><a href="index.php">Inicio</a></li>
-							<li><a href="qs_dk.php">¿Quién es DK?</a></li>
+							<li><a href="qs_dk.php">Â¿QuiÃ©n es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li class="current"><a href="recursos.php">Recursos</a></li>
-							<li> <form method="post" action="recetas.php">	
-						        
-						        <div class="active-links">
-						        	
-						        	<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                    	       
-						               
-						        	<div id="signin-dropdown" align="left">        		
-						        	            
-										<label><span>Categor&iacute;a</span></label>
-								        <select name="categoria" id="categoria">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);	
-												// Voy imprimiendo el select de nomcategoria
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-										
-										<br>
-							         	<label><span>Ingrediente</span></label>
-								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions"></div>	   			
-
-								        <label><span>Estado</span></label>
-								        <select name="estados" id="estados">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion);	
-												// Voy imprimiendo el select de estado
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-
-										<br><br>
-
-							           	<right><button type="submit" class="button">Buscar receta</button></right>
-
-						        	</div>
-						        </div>
-						   		
-						   		</form>
+							<li> 
+							        <?php include('menu.php'); ?>	
 						   	</li>
 						</ul>
 			  		</nav>
 
-	</div>
+		</div>
 			
 		<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
-                <header>
-						<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
-				</header>
-                
-				<?php 					
-					// PDF resultado
-					echo "<embed src='".$URL."' width='630' height='600'>";	
-				?>                
+			<p>&nbsp;</p>	
+	                <p>&nbsp;</p>	
+	                <header>
+							<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
+					</header>
+        
+ 	               	<div>
+ 	               	<p>&nbsp;</p>	
+    				<p>&nbsp;</p>	
+	               	<?php
+						// PDF resultado
+						//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
+						//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
+						echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
+  						echo "<p>It appears you don't have a PDF plugin for this browser. You can <a href='".$URL."'>click here to download the PDF file.</a></p>";
+  						echo "</object>";
+					?>
+					</div>
+					
+				</div>                
                
 			</section>			
 
@@ -159,7 +122,7 @@
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 ComisiÃ³n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->
@@ -175,3 +138,4 @@
 
 	</body>
 </html>
+

@@ -44,61 +44,11 @@ require('config.php');
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Inicio</a></li>
-							<li class="current"><a href="qs_dk.php">øQuiÈn es DK?</a></li>
+							<li class="current"><a href="qs_dk.php">¬øQui√©n es DK?</a></li>
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>
-							<li> <form method="post" action="recetas.php">	
-						        
-						        <div class="active-links">
-						        	
-						        	<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                    	       
-						               
-						        	<div id="signin-dropdown" align="left">        		
-						        	            
-										<label><span>Categor&iacute;a</span></label>
-								        <select name="categoria" id="categoria">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);	
-												// Voy imprimiendo el select de nomcategoria
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-										
-										<br>
-							         	<label><span>Ingrediente</span></label>
-								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions"></div>	   			
-
-								        <label><span>Estado</span></label>
-								        <select name="estados" id="estados">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion);	
-												// Voy imprimiendo el select de estado
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-
-										<br><br>
-
-							           	<right><button type="submit" class="button">Buscar receta</button></right>
-
-						        	</div>
-						        </div>
-						   		
-						   		</form>
+							<li><?php include('menu.php') ?>
 						  </li>
 						</ul>
 			  </nav>
@@ -223,23 +173,23 @@ require('config.php');
                     
                     			<article>
                                     <h3>Reconocimientos</h3>
-									  		<p class="hanging-indent"><strong>1971</strong> Medalla de Plata de la SecretarÌa de Turismo de MÈxico por su promociÛn de la cultura mexicana a travÈs de la comida.</p>
-                                            <p class="hanging-indent"><strong>1980</strong> Presea especial Amando Farga Font de la AsociaciÛn de Escritores de la Comida Mexicana.</p>
-                                            <p class="hanging-indent"><strong>1981</strong> La Orden del ¡guila Azteca del Gobierno de MÈxico.</p>
-                                            <p class="hanging-indent"><strong>1984</strong> El Premio del Molcajete de Jade de la SecretarÌa de Turismo de MÈxico y la cadena de Hoteles Holiday Inn.</p>
-                                            <p class="hanging-indent"><strong>1991</strong> Presea especial Amando Farga Font de la AsociaciÛn de Restauranteros de MÈxico.</p>
-                                            <p class="hanging-indent"><strong>1992</strong> Nombrada Investigadora AcadÈmica por la Sociedad Mexicana de GastronomÌa.</p>
+									  		<p class="hanging-indent"><strong>1971</strong> Medalla de Plata de la Secretar√≠a de Turismo de M√©xico por su promoci√≥n de la cultura mexicana a trav√©s de la comida.</p>
+                                            <p class="hanging-indent"><strong>1980</strong> Presea especial Amando Farga Font de la Asociaci√≥n de Escritores de la Comida Mexicana.</p>
+                                            <p class="hanging-indent"><strong>1981</strong> La Orden del √Åguila Azteca del Gobierno de M√©xico.</p>
+                                            <p class="hanging-indent"><strong>1984</strong> El Premio del Molcajete de Jade de la Secretar√≠a de Turismo de M√©xico y la cadena de Hoteles Holiday Inn.</p>
+                                            <p class="hanging-indent"><strong>1991</strong> Presea especial Amando Farga Font de la Asociaci√≥n de Restauranteros de M√©xico.</p>
+                                            <p class="hanging-indent"><strong>1992</strong> Nombrada Investigadora Acad√©mica por la Sociedad Mexicana de Gastronom√≠a.</p>
                                             <p class="hanging-indent"><strong>1995</strong> Reconocimiento del Instituto Cultural Domecq.</p>
-                                            <p class="hanging-indent"><strong>2000</strong> Medalla de Oro de la AsociaciÛn de Restauranteros de MÈxico.</p>
-                                            <p class="hanging-indent"><strong>2001</strong> Medalla de plata de la CANIRAC (C·mara Nacional de la Industria Alimenticia y de Restaurantes de MÈxico).</p>
-                                            <p class="hanging-indent"><strong>2001</strong> MenciÛn honorÌfica en La Feria de Puebla por la SecretarÌa de Cultura y de Turismo.</p>
-                                            <p class="hanging-indent"><strong>2002</strong> Miembro de la Orden del Imperio Brit·nico por el Gobierno Brit·nico por ampliar las relaciones culturales entre MÈxico y el Reino Unido.</p>
-                                            <p class="hanging-indent"><strong>2003</strong> Presea especial de Life Achievement de la AsociaciÛn Internacional de Profesionales de la Cocina.</p>
+                                            <p class="hanging-indent"><strong>2000</strong> Medalla de Oro de la Asociaci√≥n de Restauranteros de M√©xico.</p>
+                                            <p class="hanging-indent"><strong>2001</strong> Medalla de plata de la CANIRAC (C√°mara Nacional de la Industria Alimenticia y de Restaurantes de M√©xico).</p>
+                                            <p class="hanging-indent"><strong>2001</strong> Menci√≥n honor√≠fica en La Feria de Puebla por la Secretar√≠a de Cultura y de Turismo.</p>
+                                            <p class="hanging-indent"><strong>2002</strong> Miembro de la Orden del Imperio Brit√°nico por el Gobierno Brit√°nico por ampliar las relaciones culturales entre M√©xico y el Reino Unido.</p>
+                                            <p class="hanging-indent"><strong>2003</strong> Presea especial de Life Achievement de la Asociaci√≥n Internacional de Profesionales de la Cocina.</p>
                                             <p class="hanging-indent"><strong>2003</strong> Reconocimiento por su trabajo con alimentos sustentables por el Monterey Bay Aquarium.</p>
-                                            <p class="hanging-indent"><strong>2011</strong> Reconocimiento de la FundaciÛn James Beard Foundation ñ Libro de Cocina del AÒo ìOaxaca al Gustoî.</p>
-                                            <p class="hanging-indent"><strong>2012</strong> Medalla de Oro del Vatel Club de MÈxico.</p>
-                                            <p class="hanging-indent"><strong>2013</strong> El Molcajete de Plata por la AsociaciÛn Mexicana de GastronomÌa, CofradÌa de Gourmets de la Zona Rosa y el Club de Industriales.</p>
-                                            <p class="hanging-indent"><strong>2013</strong> a la fecha, un sinn˙mero de reconocimientos por institutos gastronÛmicos de todo el paÌs.</p>
+                                            <p class="hanging-indent"><strong>2011</strong> Reconocimiento de la Fundaci√≥n James Beard Foundation ¬ñ Libro de Cocina del A√±o ¬ìOaxaca al Gusto¬î.</p>
+                                            <p class="hanging-indent"><strong>2012</strong> Medalla de Oro del Vatel Club de M√©xico.</p>
+                                            <p class="hanging-indent"><strong>2013</strong> El Molcajete de Plata por la Asociaci√≥n Mexicana de Gastronom√≠a, Cofrad√≠a de Gourmets de la Zona Rosa y el Club de Industriales.</p>
+                                            <p class="hanging-indent"><strong>2013</strong> a la fecha, un sinn√∫mero de reconocimientos por institutos gastron√≥micos de todo el pa√≠s.</p>
                                             <p class="hanging-indent"><strong>?</strong> Reconocimiento del Club de la Buena Mesa, Guadalajara, Jalisco.</p>
                   				</article>
 
@@ -251,7 +201,7 @@ require('config.php');
         
 		<!-- Copyright -->
 					<div class="copyright">
-					&copy; 2014 ComisiÛn Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+					&copy; 2014 Comisi√≥n Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
                     </div>        
         
         <!-- Icons -->
@@ -267,3 +217,4 @@ require('config.php');
 
 	</body>
 </html>
+

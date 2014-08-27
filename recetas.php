@@ -38,10 +38,10 @@
 		}
 	}
 
-	if (is_null($_where))
+	/*if (is_null($_where))
 			$_where = $_where." Publico = 1";
 		else
-			$_where = "(".$_where.") AND Publico = 1";
+			$_where = "(".$_where.") AND Publico = 1";*/
 
 	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$_where." ORDER BY recetanombre";		
 	$consulta=mysql_query($sql, $conexion);							
