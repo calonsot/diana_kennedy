@@ -7,7 +7,7 @@
 	require('config.php');
 
 	$filtro = $_GET["filtro"];			
-	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
+	$sql = "SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
 	//Conexión a la base de datos 
 	$con = $conexion; 	
 
@@ -28,7 +28,7 @@
 	$_pagi_conteo_alternativo = true;//recomendado false.
 	 
 	//Supongamos que sólo nos interesa propagar estas dos variables
-	$_pagi_propagar = array("URL","recetanombre");//No importa si son POST o GET
+	$_pagi_propagar = array("URL","recetanombre","publico");//No importa si son POST o GET
 	 
 	//Definimos qué estilo CSS se utilizará para los enlaces de paginación.
 	//El estilo debe estar definido previamente
@@ -121,57 +121,7 @@
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li class="current"><a href="recursos.php">Recursos</a></li>
-							<li><form method="post" action="recetas.php"> 
-                    
-                    <div class="active-links">
-                      
-                      <input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                             
-                           
-                      <div id="signin-dropdown" align="left">           
-                                  
-                    <label><span>Categor&iacute;a</span></label>
-                        <select name="categoria" id="categoria">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);  
-                        // Voy imprimiendo el select de nomcategoria
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-                    
-                    <br>
-                        <label><span>Ingrediente</span></label>
-                        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-                      <div id="suggestions"></div>          
-
-                        <label><span>Estado</span></label>
-                        <select name="estados" id="estados">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion); 
-                        // Voy imprimiendo el select de estado
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-
-                    <br><br>
-
-                          <center><button type="submit">Buscar receta</button></center>
-
-                      </div>
-                    </div>
-                  
-                  </form></li>
+							<li> <?php include('menu.php') ?></li>
 						</ul>
 			  		</nav>
 
@@ -181,32 +131,59 @@
 			<section class="wrapper style1">
 				<div class="container">
                 <header>
-						<h3 align="right"><?php 
-											if ($_pagi_totalReg <=5)
+						<h4 align="center"><?php 
+											/*if ($_pagi_totalReg <=5)
 												echo " <span class=fuente8><b>Se encontraron $_pagi_totalReg recetas.</b></span>";
 											else
-						                    	echo $_pagi_info; 
-						                  ?></h3>
+						                    	echo $_pagi_info; */
+						                  ?></h4>
 				</header>
+				<br>
+				<br>
 
 				<?php 					
-					echo "<ul>";
+					echo "<div class='micaja'>";
 
 					//Leemos y escribimos los registros de la página actual 
 					$i = 1;
+					$bandera = true;
 					while($row = mysql_fetch_array($_pagi_result))
 					{ 							
-						echo "<li>";
-						$row['recetanombre']=htmlentities($row['recetanombre']);
-						echo "<h2><a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></h2>";
-					    echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
-					    echo "</li>";
+						if ($bandera == true)
+						{
+							$bandera = false;
+							echo "<div class='izq'>";
+							echo "<div class='micontenido'>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							if ($row['publico']==1)
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
+							else
+								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    echo "</div>";
+						    echo "</div>";							
+						}
+						else
+						{
+							$bandera = true;
+							echo "<div class='der'>";
+							echo "<div class='micontenido'>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+						    if ($row['publico']==1)
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripción... </p><br><br>";
+							else
+								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    echo "</div>";
+						    echo "</div>";	
+						}						
+
 					    $i += 1;
 					    if ($i == 4)
 					    	$i = 1;
 					}
 
-					echo "</ul>";
+					echo "</div>";
 
 					//Incluimos la barra de navegación 
 					echo"<center><p>".$_pagi_navegacion."</p></center>";

@@ -16,10 +16,8 @@ require('config.php');
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		
-        
-        <script src="js/jquery-1.9.1.js"></script>
-		<script src="js/menu.js"></script>
+		    
+    <script src="js/jquery-1.9.1.js"></script>
 		<script type="text/javascript">
 /* <![CDATA[ */
 	( function($) {
@@ -48,6 +46,7 @@ require('config.php');
 		});
 		</script>
 
+		<script src="js/menu.js"></script>
 		
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -79,57 +78,7 @@ require('config.php');
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li class="current"><a href="recursos.php">Recursos</a></li>
-							<li><form method="post" action="recetas.php"> 
-                    
-                    <div class="active-links">
-                      
-                      <input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                             
-                           
-                      <div id="signin-dropdown" align="left">           
-                                  
-                    <label><span>Categor&iacute;a</span></label>
-                        <select name="categoria" id="categoria">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);  
-                        // Voy imprimiendo el select de nomcategoria
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-                    
-                    <br>
-                        <label><span>Ingrediente</span></label>
-                        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-                      <div id="suggestions"></div>          
-
-                        <label><span>Estado</span></label>
-                        <select name="estados" id="estados">
-                            <?php 
-                              $consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion); 
-                        // Voy imprimiendo el select de estado
-                        echo "<option value='0'>Elige</option>";  
-                        while($registro=mysql_fetch_array($consulta))
-                        {
-                          // Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-                          $registro[1]=htmlentities($registro[1]);
-                          echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-                        }
-                      ?>
-                    </select>
-
-                    <br><br>
-
-                          <center><button type="submit">Buscar receta</button></center>
-
-                      </div>
-                    </div>
-                  
-                  </form></li>
+							<li><?php include('menu.php') ?></li>
 						</ul>
 			  		</nav>
 
@@ -212,7 +161,7 @@ require('config.php');
 								  <h3><a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">Galería</a></h3>
                            		  <h3>Ligas relacionadas</h3>
                                     	<ul style="padding-left:20px">
-                                          <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/mAlimentacion.html">Alimentos</a></li>
+                                          <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/alimentos.html">Alimentos</a></li>
                                           <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/genes/centrosOrigen/centrosOrig.html">Centros de domesticaci&oacute;n</a></li>
 										  <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="https://www.academia.edu/2547625/Comida_cultura_y_modernidad_en_Mexico._Perspectivas_antropologicas_e_historicas" target="_blank">Comida, cultura y modernidad en México | Perspectivas antropológicas e históricas</a></li>
                                         </ul>

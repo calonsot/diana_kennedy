@@ -48,57 +48,7 @@ require('config.php');
 							<li class="current"><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li><a href="recursos.php">Recursos</a></li>
-							<li> <form method="post" action="recetas.php">	
-						        
-						        <div class="active-links">
-						        	
-						        	<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />                                    	       
-						               
-						        	<div id="signin-dropdown" align="left">        		
-						        	            
-										<label><span>Categor&iacute;a</span></label>
-								        <select name="categoria" id="categoria">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);	
-												// Voy imprimiendo el select de nomcategoria
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-										
-										<br>
-							         	<label><span>Ingrediente</span></label>
-								        <input type="text" size="50" id="ingrediente" name="ingrediente" />
-									   	<div id="suggestions"></div>	   			
-
-								        <label><span>Estado</span></label>
-								        <select name="estados" id="estados">
-								            <?php 
-								            	$consulta=mysql_query("SELECT DISTINCT e.id as id, e.nomestado as nomestado FROM estados e INNER JOIN diannakennedy d ON e.id = d.idestado WHERE d.Publico = 1 ORDER BY e.nomestado", $conexion);	
-												// Voy imprimiendo el select de estado
-												echo "<option value='0'>Elige</option>";	
-												while($registro=mysql_fetch_array($consulta))
-												{
-													// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-													$registro[1]=htmlentities($registro[1]);
-													echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
-												}
-											?>
-										</select>
-
-										<br><br>
-
-							           	<center><button type="submit">Buscar receta</button></center>
-
-						        	</div>
-						        </div>
-						   		
-						   		</form>
+							<li> <?php include('menu.php') ?>
 						  </li>
 						</ul>
 			  </nav>

@@ -11,6 +11,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/menu.js"></script>
 		
 		<script src="js/jquery-1.9.1.js"></script>
 		<script type="text/javascript">
@@ -143,8 +144,7 @@
 							<li><a href="quinta.php">Quinta</a></li>
 							<li><a href="proyecto.php">Proyecto</a></li>
 							<li class="current"><a href="recursos.php">Recursos</a></li>
-							<li><input name="Buscar" type="text" value="Buscar...">
-						  </li>
+							<li><?php include('menu.php') ?></li>
 						</ul>
 			  </nav>
 
@@ -234,7 +234,7 @@
 								  <h3><a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">Galería</a></h3>
                            		  <h3>Ligas relacionadas</h3>
                                     	<ul style="padding-left:20px">
-                                          <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/mAlimentacion.html">Alimentos</a></li>
+                                          <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/alimentos.html">Alimentos</a></li>
                                           <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/genes/centrosOrigen/centrosOrig.html">Centros de domesticaci&oacute;n</a></li>
 										  <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="https://www.academia.edu/2547625/Comida_cultura_y_modernidad_en_Mexico._Perspectivas_antropologicas_e_historicas" target="_blank">Comida, cultura y modernidad en México | Perspectivas antropológicas e históricas</a></li>
                                         </ul>

@@ -1,0 +1,8 @@
+#Estos archivos no son subidos al servidor
+.buildpath
+.dropbox
+.settings/
+.project
+MexicoUnaOdiseaCulinaria/*.pdf
+*.sql
+config.php
