@@ -34,18 +34,18 @@
 
                             <section>
                              	<h3>Huerto exterior</h3>
-                                        <p>El huerto exterior tiene alrededor de <strong>150</strong> especies incluyendo árboles como cacalosuchitl, durazno criollo, canastilla, capulín, guayaba criolla, lima agria, macadamia y níspero, arbustos como la yerba santa roja, hierbas como pimentón, tabaco silvestre, toronjil, chile de árbol, camote de coyote, azucenas amarilla, alfalfa silvestre, alcachofa y variedades de lechuga y jitomate, entre otras. También hay enredaderas como el maracuyá y trepadoras como el chayote.</p>
+                                        <p>El huerto exterior tiene alrededor de <strong>150</strong> especies incluyendo &aacute;rboles como cacalosuchil, durazno criollo, canastilla, capul&iacute;n, guayaba criolla, lima agria, macadamia y n&iacute;spero, arbustos como la yerbasanta roja, hierbas como piment&oacute;n, tabaco silvestre, toronjil, chile de &aacute;rbol, camote de coyote, azucenas amarilla, alfalfa silvestre, alcachofa y variedades de lechuga y jitomate, entre otras. Tambi&eacute;n hay enredaderas como el maracuy&aacute; y trepadoras como el chayote.</p>
                                         
                                 <h3>Huerto interior</h3>
-                                        <p>En el huerto hay entre <strong>40 y 50</strong> especies, incluyendo plantas de ornato y plantas comestibles como flor de muerto, epazote criollo, epazote de árbol, orquídeas, granada japonesa y granada dulce, chirimoya, arúgula, tulipán silvestre, albahaca, salvia, nopalillos: blanco, morado y rojo ,y noche buena criolla, dalia, romerillo, ortiga, mirto, entre otras.</p>
+                                        <p>En el huerto hay entre <strong>40 y 50</strong> especies, incluyendo plantas de ornato y plantas comestibles como flor de muerto, epazote criollo, epazote de &aacute;rbol, orqu&iacute;deas, granada japonesa y granada dulce, chirimoya, ar&uacute;gula, tulip&aacute;n silvestre, albahaca, salvia, nopalillos blanco, morado y rojo y noche buena criolla, dalia, romerillo, ortiga, mirto, entre otras.</p>
                                         
                                 <span class="image featured"><img src="images/quinta_dk3.jpg" alt="" /></span>
                                 
                               <h3>Invernadero</h3>
-                                        <p>Hay oreja de león, palma, cilantro extranjero, lima, pasiflorina, plátano de varios tipos, y chile manzano, habanero y dulce, entre otras.</p>
+                                        <p>Hay oreja de le&oacute;n, palma, cilantro extranjero, lima, pasiflorina, pl&aacute;tano de varios tipos, y chile manzano, habanero y dulce.</p>
                                         
-                               <h3>Kanché o canché</h3>
-                                        <p>El kanché es una estructura elevada de madera de origen maya, empleada para el cultivo de plantas. En ella se coloca de 15 a 20 cm de tierra con abonos orgánicos. En el kanché de la Quinta Diana se cultivan fresas, berros y jitomates silvestres.</p>
+                               <h3>Kanch&eacute; o canch&eacute;</h3>
+                                        <p>El kanch&eacute; es una estructura elevada de madera de origen maya para el cultivo de plantas. En ella se coloca de 15 a 20 cm de tierra con abonos org&aacute;nicos. En el kanch&eacute; de la Quinta Diana se cultivan fresas, berros y jitomates silvestres.</p>
                             </section>
 
 							</div>
@@ -53,9 +53,8 @@
 					</div>
                     
                     <article>
-                    	<h3>Catálogo de plantas Quinta Diana Kennedy (<a href="pdf/catalogo_plantas_qd.pdf" target="_blank" style="color:#900000">PDF</a>)</h3>
-                                        <p>Un resultado extra del proyecto fue la elaboración de un catálogo con índice de nombres comunes, nombres científicos y fotografías de los ejemplares herborizados. Los ejemplares están depositados en el Herbario Nacional (MEXU) de la Universidad Nacional Autónoma de México.
-</p>
+                    	<h3>Cat&aacute;logo de plantas Quinta Diana Kennedy (<a href="pdf/catalogo_plantas_qd.pdf" target="_blank" style="color:#900000">PDF</a>)</h3>
+                      <p>Un resultado extra del proyecto fue la elaboraci&oacute;n de un cat&aacute;logo con &iacute;ndice de nombres comunes, nombres cient&iacute;ficos y fotograf&iacute;as de los ejemplares herborizados. Los ejemplares est&aacute;n depositados en el Herbario Nacional (MEXU) de la Universidad Nacional Aut&oacute;noma de M&eacute;xico.</p>
 
 					  <p>Diana tiene la iniciativa de crear el Centro Diana Kennedy para formalizar las lecciones de cocina mexicana.<br>
 					    <a href="http://dianakennedycenter.org/" target="_blank"><strong>www.dianakennedycenter.org</strong></a></p>

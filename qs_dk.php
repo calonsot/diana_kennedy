@@ -118,23 +118,23 @@
                     
                     			<article>
                                     <h3>Reconocimientos</h3>
-									  		<p class="hanging-indent"><strong>1971</strong> Medalla de Plata de la Secretaría de Turismo de México por su promoción de la cultura mexicana a través de la comida.</p>
-                                            <p class="hanging-indent"><strong>1980</strong> Presea especial Amando Farga Font de la Asociación de Escritores de la Comida Mexicana.</p>
-                                            <p class="hanging-indent"><strong>1981</strong> La Orden del Águila Azteca del Gobierno de México.</p>
-                                            <p class="hanging-indent"><strong>1984</strong> El Premio del Molcajete de Jade de la Secretaría de Turismo de México y la cadena de Hoteles Holiday Inn.</p>
-                                            <p class="hanging-indent"><strong>1991</strong> Presea especial Amando Farga Font de la Asociación de Restauranteros de México.</p>
-                                            <p class="hanging-indent"><strong>1992</strong> Nombrada Investigadora Académica por la Sociedad Mexicana de Gastronomía.</p>
+									  		<p class="hanging-indent"><strong>1971</strong> Medalla de Plata de la Secretar&iacute;a de Turismo de M&eacute;xico por su promoci&oacute;n de la cultura mexicana a trav&eacute;s de la comida.</p>
+                                            <p class="hanging-indent"><strong>1980</strong> Presea especial Amando Farga Font de la Asociaci&oacute;n de Escritores de la Comida Mexicana.</p>
+                                            <p class="hanging-indent"><strong>1981</strong> La Orden del &Aacute;�guila Azteca del Gobierno de M&eacute;xico.</p>
+                                            <p class="hanging-indent"><strong>1984</strong> El Premio del Molcajete de Jade de la Secretar&iacute;a de Turismo de M&eacute;xico y la cadena de Hoteles Holiday Inn.</p>
+                                            <p class="hanging-indent"><strong>1991</strong> Presea especial Amando Farga Font de la Asociaci&oacute;n de Restauranteros de M&eacute;xico.</p>
+                                            <p class="hanging-indent"><strong>1992</strong> Nombrada Investigadora Acad&eacute;mica por la Sociedad Mexicana de Gastronom&iacute;a.</p>
                                             <p class="hanging-indent"><strong>1995</strong> Reconocimiento del Instituto Cultural Domecq.</p>
-                                            <p class="hanging-indent"><strong>2000</strong> Medalla de Oro de la Asociación de Restauranteros de México.</p>
-                                            <p class="hanging-indent"><strong>2001</strong> Medalla de plata de la CANIRAC (Cámara Nacional de la Industria Alimenticia y de Restaurantes de México).</p>
-                                            <p class="hanging-indent"><strong>2001</strong> Mención honorífica en La Feria de Puebla por la Secretaría de Cultura y de Turismo.</p>
-                                            <p class="hanging-indent"><strong>2002</strong> Miembro de la Orden del Imperio Británico por el Gobierno Británico por ampliar las relaciones culturales entre México y el Reino Unido.</p>
-                                            <p class="hanging-indent"><strong>2003</strong> Presea especial de Life Achievement de la Asociación Internacional de Profesionales de la Cocina.</p>
+                                            <p class="hanging-indent"><strong>2000</strong> Medalla de Oro de la Asociaci&oacute;n de Restauranteros de M&eacute;xico.</p>
+                                            <p class="hanging-indent"><strong>2001</strong> Medalla de plata de la CANIRAC (C&aacute;mara Nacional de la Industria Alimenticia y de Restaurantes de M&eacute;xico).</p>
+                                            <p class="hanging-indent"><strong>2001</strong> Menci&oacute;n honor&iacute;fica en La Feria de Puebla por la Secretar&iacute;a de Cultura y de Turismo.</p>
+                                            <p class="hanging-indent"><strong>2002</strong> Miembro de la Orden del Imperio Brit&aacute;nico por el Gobierno Brit&aacute;nico por ampliar las relaciones culturales entre M&eacute;xico y el Reino Unido.</p>
+                                            <p class="hanging-indent"><strong>2003</strong> Presea especial de Life Achievement de la Asociaci&oacute;n Internacional de Profesionales de la Cocina.</p>
                                             <p class="hanging-indent"><strong>2003</strong> Reconocimiento por su trabajo con alimentos sustentables por el Monterey Bay Aquarium.</p>
-                                            <p class="hanging-indent"><strong>2011</strong> Reconocimiento de la Fundación James Beard Foundation  Libro de Cocina del Año Oaxaca al Gusto.</p>
-                                            <p class="hanging-indent"><strong>2012</strong> Medalla de Oro del Vatel Club de México.</p>
-                                            <p class="hanging-indent"><strong>2013</strong> El Molcajete de Plata por la Asociación Mexicana de Gastronomía, Cofradía de Gourmets de la Zona Rosa y el Club de Industriales.</p>
-                                            <p class="hanging-indent"><strong>2013</strong> a la fecha, un sinnúmero de reconocimientos por institutos gastronómicos de todo el país.</p>
+                                            <p class="hanging-indent"><strong>2011</strong> Reconocimiento de la Fundaci&oacute;n James Beard Foundation - Libro de Cocina del A&ntilde;o &ldquo;Oaxaca al Gusto&rdquo;.</p>
+                                            <p class="hanging-indent"><strong>2012</strong> Medalla de Oro del Vatel Club de M&eacute;xico.</p>
+                                            <p class="hanging-indent"><strong>2013</strong> El Molcajete de Plata por la Asociaci&oacute;n Mexicana de Gastronom&iacute;a, Cofrad&iacute;a de Gourmets de la Zona Rosa y el Club de Industriales.</p>
+                                            <p class="hanging-indent"><strong>2013</strong> a la fecha, un sin n&uacute;mero de reconocimientos por institutos gastron&oacute;micos de todo el pa&iacute;s.</p>
                                             <p class="hanging-indent"><strong>?</strong> Reconocimiento del Club de la Buena Mesa, Guadalajara, Jalisco.</p>
                   				</article>
 
