@@ -1,7 +1,6 @@
 <?php include('menu.php') ?>
 
 <link rel="stylesheet" type="text/css" href="slider/css/styleslider.css" />
-<script type="text/javascript" src="slider/js/jquery.js"></script>
 <script type="text/javascript" src="slider/js/s3Slider.js"></script>
 
 <script type="text/javascript">
