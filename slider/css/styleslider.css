@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+h2, ul, li, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/*-----------------------------------------------*/
+/*---------------      Slider     --------------*/
+/*---------------------------------------------*/
+
+#slider1 {
+    width: 1000px; /* important to be same as image width */
+    height: 300px; /* important to be same as image height */
+    position: relative; /* important */
+	overflow: hidden; /* important */
+	clear: both;
+	margin-bottom: 35px
+}
+
+#slider1Content {
+    width: 1000px; /* important to be same as image width or wider */
+    position: absolute;
+	top: 0;
+	margin-left: 0;
+}
+.slider1Image {
+    float: left;
+    position: relative;
+	display: none;
+}
+.slider1Image span {
+    position: absolute;
+	font-size: .9em;
+    padding: 10px 20px;
+    width: 694px;
+    background-color: #000;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+    opacity: 0.8;
+    color: #fff;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.slider1Image span strong {
+    font-size: 14px;
+}
+.left {
+	top: 0;
+    left: 0;
+	width: 560px !important;
+	height: 280px;
+}
+.right {
+	right: 0;
+	bottom: 0;
+	width: 560px !important;
+	height: 290px;
+}
+
+#slider1 h2 {font-size: 2em; padding: 15px 0}

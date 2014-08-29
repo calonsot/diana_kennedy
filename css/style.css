@@ -949,11 +949,13 @@
 		color:#fff;
 		background-color: #575748;
 		border-bottom:1px #F0F0E1 solid;
-		text-align:left;
+		text-align:center;
+		font-size:80%;
 	}
 
 	table.header tr:nth-child(n+2) {
 		text-align: left;
+		font-size:90%;
 	}
 
 

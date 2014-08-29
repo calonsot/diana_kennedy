@@ -120,7 +120,7 @@
                                     <h3>Reconocimientos</h3>
 									  		<p class="hanging-indent"><strong>1971</strong> Medalla de Plata de la Secretar&iacute;a de Turismo de M&eacute;xico por su promoci&oacute;n de la cultura mexicana a trav&eacute;s de la comida.</p>
                                             <p class="hanging-indent"><strong>1980</strong> Presea especial Amando Farga Font de la Asociaci&oacute;n de Escritores de la Comida Mexicana.</p>
-                                            <p class="hanging-indent"><strong>1981</strong> La Orden del &Aacute;Åguila Azteca del Gobierno de M&eacute;xico.</p>
+                                            <p class="hanging-indent"><strong>1981</strong> La Orden del √Åguila Azteca del Gobierno de M&eacute;xico.</p>
                                             <p class="hanging-indent"><strong>1984</strong> El Premio del Molcajete de Jade de la Secretar&iacute;a de Turismo de M&eacute;xico y la cadena de Hoteles Holiday Inn.</p>
                                             <p class="hanging-indent"><strong>1991</strong> Presea especial Amando Farga Font de la Asociaci&oacute;n de Restauranteros de M&eacute;xico.</p>
                                             <p class="hanging-indent"><strong>1992</strong> Nombrada Investigadora Acad&eacute;mica por la Sociedad Mexicana de Gastronom&iacute;a.</p>
