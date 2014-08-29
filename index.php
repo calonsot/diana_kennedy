@@ -1,11 +1,4 @@
 <?php include('menu.php') ?>
-
-<script type="text/javascript">
-		$(document).ready(function() {
-			$( 'body' ).responsiveVideo();
-		});
-</script>
-		
 					
 		<!-- Banner -->
 			<section id="banner">

@@ -1,4 +1,19 @@
-		$(document).ready(function () {
+function cambio (url){
+		document.getElementById('contenedor').innerHTML='<iframe width="400" height="225" src="' +  url + '" frameborder="0" allowfullscreen></iframe>';
+		return false;
+						 }
+
+function cambio2 (url){
+	  document.getElementById('contenedor2').innerHTML='<iframe width="400" height="225" src="' +  url + '" frameborder="0" allowfullscreen></iframe>';
+	  return false;
+}
+
+
+$(document).ready(function () {
+		
+			
+			//parte de recursos
+	    	$( 'body' ).responsiveVideo();			
 			
 			//Mostramos u ocultamos el panel de busqueda avanzada
 			$('.active-links').click(function () {			
