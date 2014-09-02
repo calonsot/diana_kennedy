@@ -583,7 +583,6 @@
 	#nav {
 		cursor: default;
 		background-color: rgba(45,0,0,0.5);
-
 		/*background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 		background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
@@ -759,7 +758,7 @@
 
 		.wrapper.style1 {
 			background: #fff;
-			position: relative;
+			z-index:10;
 		}
 
 		.wrapper.style2 {
@@ -857,24 +856,25 @@
 		}
 
 		.active-links {
-			/*position:fixed;
-			/*right:150px;
+			/*position:relative;
+			right:150px;
 			top:0;*/
 		}
 
 		#signin-dropdown {
-	background-color: rgba(90,0,0,0.8);
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	box-shadow: 0 1px 2px #900000;
-	-webkit-box-shadow: 0 1px 2px #900000;
-	min-height: 200px;
-	min-width: 160px;
-	position: absolute;
-	right: 0;
-	display: none;
-	padding-left:10px; padding-bottom:10px;
-	z-index:1;
+		background-color: rgba(90,0,0,0.8);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: 0 1px 2px #900000;
+		-webkit-box-shadow: 0 1px 2px #900000;
+		min-height: 200px;
+		min-width: 160px;
+		position: absolute;
+		right: 0;
+		display: none;
+		padding-left:10px; padding-bottom:10px;
+		z-index:20;
+		
 		}
 
 		#signin-dropdown form{
@@ -889,6 +889,7 @@
 			width:350px;
 			cursor:pointer;
 		}
+
 	
 	/* Tabla */
 	
@@ -948,11 +949,13 @@
 		color:#fff;
 		background-color: #575748;
 		border-bottom:1px #F0F0E1 solid;
-		text-align:left;
+		text-align:center;
+		font-size:80%;
 	}
 
 	table.header tr:nth-child(n+2) {
 		text-align: left;
+		font-size:90%;
 	}
 
 
@@ -981,4 +984,30 @@
 	.der {
 	    float: right;
 	    width: 50%;
+	}
+
+
+	.micaja2 {
+	    overflow: hidden;
+	}
+
+	.micontenido2 {
+	    font-size: 15px;
+	    line-height: 20px;
+	    padding: 0 5px;
+	    text-align: justify;
+	}
+
+	.izq2 {
+	    float: left;
+	    width: 80%;
+	}
+
+	.izq2 .micontenido2 {
+	    border-right: 5px solid #ffffff;
+	}
+
+	.der2 {
+	    float: right;
+	    width: 20%;
 	}
