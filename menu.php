@@ -9,7 +9,8 @@ if(!session_id())
 $sessionId = session_id();
 ?>
 
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <title>Diana Kennedy | Biodiversidad Mexicana | Conabio</title>
@@ -30,9 +31,8 @@ $sessionId = session_id();
 <script src="js/skel.min.js"></script>
 <script src="js/skel-layers.min.js"></script>
 <script src="js/init.js"></script>
-<script src="js/jquery-1.9.1.js"></script>
 <script src="js/responsive_videos.js"></script>
-<script src="js/menu.js"></script>
+<script src="js/menu.js" charset="utf-8"></script>
 
 </head>
 <body>

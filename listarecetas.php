@@ -60,7 +60,7 @@
 
 					//Leemos y escribimos los registros de la página actual 
 					$i = 1;
-				        $bandera = true;
+				    $bandera = true;
 					while($row = mysql_fetch_array($_pagi_result))
 					{ 							
 						if ($bandera == true)
@@ -69,7 +69,7 @@
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
 							$row['recetanombre']=htmlentities($row['recetanombre']);
-							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 							if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripci�n... </p><br><br>";
 							else
@@ -83,7 +83,7 @@
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
 							$row['recetanombre']=htmlentities($row['recetanombre']);
-							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 						    if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripci�n... </p><br><br>";
 							else

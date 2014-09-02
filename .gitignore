@@ -4,5 +4,9 @@
 .settings/
 .project
 MexicoUnaOdiseaCulinaria/*.pdf
-*.sql
 config.php
+*.accdb
+*.accdb
+*.laccdb
+*.pdf
+respaldos
