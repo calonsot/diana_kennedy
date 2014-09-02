@@ -985,3 +985,29 @@
 	    float: right;
 	    width: 50%;
 	}
+
+
+	.micaja2 {
+	    overflow: hidden;
+	}
+
+	.micontenido2 {
+	    font-size: 15px;
+	    line-height: 20px;
+	    padding: 0 5px;
+	    text-align: justify;
+	}
+
+	.izq2 {
+	    float: left;
+	    width: 80%;
+	}
+
+	.izq2 .micontenido2 {
+	    border-right: 5px solid #ffffff;
+	}
+
+	.der2 {
+	    float: right;
+	    width: 20%;
+	}

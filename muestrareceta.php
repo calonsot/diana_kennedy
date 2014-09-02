@@ -2,32 +2,53 @@
 include('menu.php');
 $URL = $_GET["urlreceta"];
 $nombrereceta = $_GET["nombrereceta"];	
+$filtro = $_GET["filtro"];
 ?>
 			
 		<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
-			<p>&nbsp;</p>	
+					<p>&nbsp;</p>	
 	                <p>&nbsp;</p>	
 	                <header>
 							<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
 					</header>
-        
- 	               	<div>
+         	               	
  	               	<p>&nbsp;</p>	
     				<p>&nbsp;</p>	
-	               	<?php
-						// PDF resultado
-						//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
-						//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
-						echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-  						echo "<p>It appears you don't have a PDF plugin for this browser. You can <a href='".$URL."'>click here to download the PDF file.</a></p>";
-  						echo "</object>";
-					?>
+    				<div class='micaja2'>
+	               		<div class='izq2'>
+	               			<div class='micontenido2'>
+			               	<?php
+								// PDF resultado
+								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
+								//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
+								echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
+		  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
+		  						echo "</object>";
+							?>
+							</div>	
+						</div>
+						<div class='der2'>
+							<div class='micontenido2'>
+							<?php								
+								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
+								$i = 1;
+								$j = 1;
+								while($registros=mysql_fetch_array($consultarec))
+								{									
+									$j += 1;
+									if ($j <= 5)																		
+										echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".htmlentities($registros[1])."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='36' height='36' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
+									$i += 1;
+								    if ($i == 4)
+								    	$i = 1;
+								}
+							?>	
+							</div>						
+						</div>
 					</div>
-					
-				</div>                
-               
+				</div>               
 			</section>			
 
 		<?php include('footer.php') ?>
