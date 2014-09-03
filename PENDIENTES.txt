@@ -3,3 +3,4 @@ PENDIENTES DE LA APGINA DE DIANA KENNEDY
 La liga de las rectas que no son publicas y que iran al final de la pagina para saber que existen otras
 Las imagenes de las recetas se desplegaran en la parte inferior donde se ponen las sugerencias en muestrareceta.php
 Falta el slider que ira en index.php con las imagenes proporcionadas
+Cuando haces una busqueda y no se pone el filtro en el GET marca un error
