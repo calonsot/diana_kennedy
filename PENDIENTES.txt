@@ -1,7 +1,5 @@
 PENDIENTES DE LA APGINA DE DIANA KENNEDY
 
-Poner un header y un footer en las todas las vistas para no repetir codigo común.
-Cambiar la codificacion de las vistas a UTF-8 ya que la base tiene esa codificacion y los símbolos con acentos se decodifican mal.
-Al abrir una recete (PDF) y realizar un resize de la pantalla, se queda fijo el documento y tapa el menú en caso de desplegarlo.
-En el listado de recetas que se muestren dos columnas de 5 recetas para que se puedan visualizar más rápido. 
-Si la receta no se debe mostrar, poner solo el "nombre de la receta" y enfrente un mensaje de "No esta disponible" en lugar de "Se encontraron 0 recetas"
+La liga de las rectas que no son publicas y que iran al final de la pagina para saber que existen otras
+Las imagenes de las recetas se desplegaran en la parte inferior donde se ponen las sugerencias en muestrareceta.php
+Falta el slider que ira en index.php con las imagenes proporcionadas
