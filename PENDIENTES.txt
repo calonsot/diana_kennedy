@@ -4,3 +4,4 @@ La liga de las rectas que no son publicas y que iran al final de la pagina para 
 Las imagenes de las recetas se desplegaran en la parte inferior donde se ponen las sugerencias en muestrareceta.php
 Falta el slider que ira en index.php con las imagenes proporcionadas
 Cuando haces una busqueda y no se pone el filtro en el GET marca un error
+Aun existen recetas que no tienen el PDF: http://localhost/diana_kennedy/muestrareceta.php?urlreceta=&nombrereceta=Alb%C3%B3ndigas%20en%20chipotle%20quemado&filtro=(%20idcategoria%20=%200%20OR%20ingredientelocal%20like
