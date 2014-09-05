@@ -32,15 +32,18 @@ h3 {
   width: 100%;
   left: 0;
   top: 0;
+  overflow-x: hidden;
   }
 
 .callbacks img {
   display: block;
   position: relative;
   z-index: 1;
-  max-height: 280px;
-  width: 100%;
+  height: 242px;
+  width: auto;
   border: 0;
+  background-repeat:repeat-x;
+  /*transform: translateX(-40%);*/
   }
 
 .callbacks .caption {
