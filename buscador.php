@@ -4,7 +4,7 @@ echo '<form method="post" action="recetas.php">';
 echo '	<div class="active-links">';
 echo '		<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />';
 echo '			<div id="signin-dropdown" align="left">';
-echo '				<label><span>Categor&iacute;a</span>';
+echo '				<br><label><span>Categor&iacute;a</span>';
 echo '			        <select name="categoria" id="categoria">';
 $consulta=mysql_query("SELECT DISTINCT c.id as id, c.nomcategoria as nomcategoria FROM categoria c INNER JOIN diannakennedy d ON c.id = d.idcategoria WHERE d.Publico = 1 ORDER BY c.orden", $conexion);
 // Voy imprimiendo el select de nomcategoria

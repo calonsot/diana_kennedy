@@ -242,7 +242,7 @@ if (!$_pagi_htaccess){
 	 if ($_pagi_actual != 1){
 		// Si no estamos en la página 1. Ponemos el enlace "anterior"
 		$_pagi_url = $_pagi_actual - 1; //será el número de página al que enlazamos
-		$_pagi_navegacion_temporal[] = "<a ".$_pagi_nav_estilo_mod." href='".$_pagi_enlace."filtro=".$filtro."_pagi_pg=".$_pagi_url."'>$_pagi_nav_anterior</a>";
+		$_pagi_navegacion_temporal[] = "<a ".$_pagi_nav_estilo_mod." href='".$_pagi_enlace."filtro=".$filtro."&_pagi_pg=".$_pagi_url."'>$_pagi_nav_anterior</a>";
 	 }
 	 
 	 // La variable $_pagi_nav_num_enlaces sirve para definir cuántos enlaces con 

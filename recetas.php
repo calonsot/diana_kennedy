@@ -56,6 +56,6 @@
 		$registro=mysql_fetch_array($consulta);
 		$URL = $registro["URL"];
 		$nombrereceta = $registro["recetanombre"];
-		header('Location: muestrareceta.php?urlreceta='.$URL.'&nombrereceta='.$nombrereceta);
+		header('Location: muestrarecetas.php?urlreceta='.$URL.'&nombrereceta='.$nombrereceta);
 	}
 ?>

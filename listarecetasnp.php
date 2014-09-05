@@ -1,7 +1,7 @@
 <?php include('menu.php') ?>
 <?php
-	
-	$filtro = isset($_GET["filtro"])? $_GET["filtro"]: "Publico = 1" ;			
+
+	$filtro = isset($_GET["filtro"])? $_GET["filtro"]: "Publico = 0" ;		
 	$sql = "SELECT URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
 	//Conexión a la base de datos 
 	$con = $conexion; 	
@@ -68,17 +68,9 @@
 							$bandera = false;
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
-							$row['recetanombre']=htmlentities($row['recetanombre']);							
-							if(!is_null($row['URL']))						
-								echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
-							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
-							
-							if ($row['publico']==1)
-						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
-							else
-								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
-						    
+							$row['recetanombre']=htmlentities($row['recetanombre']);														
+							echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";							
 						    echo "</div>";
 						    echo "</div>";							
 						}
@@ -88,16 +80,8 @@
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
 							$row['recetanombre']=htmlentities($row['recetanombre']);							
-							if(!is_null($row['URL']))						
-								echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
-							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
-						    
-						    if ($row['publico']==1)
-						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
-							else
-								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
-						    
+							echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";													    
 						    echo "</div>";
 						    echo "</div>";	
 						}
@@ -108,13 +92,6 @@
 					}
 
 					echo "</div>";
-
-					//Recetas no publicas
-					$filtro_ = str_replace("Publico = 1", "Publico = 0", $filtro);								
-					$sql = "SELECT recetanombre FROM diannakennedy WHERE ".$filtro_;		
-					$total = mysql_num_rows(mysql_query($sql));					
-					if($total!=0)
-						echo "<p align='center'><a href='listarecetasnpl.php?filtro=".$filtro_."'>Ver listado de recetas no publicadas en el sitio Dianna Kennedy:".$total."</a></p>";
 
 					if ($_pagi_totalReg >10)
 					{

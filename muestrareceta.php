@@ -9,16 +9,13 @@ $filtro = $_GET["filtro"];
 			<section class="wrapper style1">
 				<div class="container">
 					<p>&nbsp;</p>	
-	                <p>&nbsp;</p>	
-	                <header>
-							<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
-					</header>
-         	               	
- 	               	<p>&nbsp;</p>	
-    				<p>&nbsp;</p>	
+	                
+ 	               		
     				<div class='micaja2'>
 	               		<div class='izq2'>
 	               			<div class='micontenido2'>
+			               	<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
+			               	<p>&nbsp;</p>	
 			               	<?php
 								// PDF resultado
 								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
@@ -31,6 +28,7 @@ $filtro = $_GET["filtro"];
 						</div>
 						<div class='der2'>
 							<div class='micontenido2'>
+							<p>Otras recetas recomendadas</p>
 							<?php								
 								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
 								$i = 1;
@@ -38,8 +36,15 @@ $filtro = $_GET["filtro"];
 								while($registros=mysql_fetch_array($consultarec))
 								{									
 									$j += 1;
-									if ($j <= 5)																		
-										echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".htmlentities($registros[1])."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='36' height='36' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
+									if ($j <= 5)
+									{
+										if(!is_null($registros[0]))	
+										{																											
+											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".htmlentities($registros[1])."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
+										}
+										else
+											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
+									}
 									$i += 1;
 								    if ($i == 4)
 								    	$i = 1;
