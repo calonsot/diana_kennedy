@@ -11,7 +11,7 @@
         auto: true,
         pager: false,
         nav: true,
-        speed: 500,
+        speed: 800,
         namespace: "callbacks",
         before: function () {
           $('.events').append("<li>before event fired.</li>");
@@ -31,23 +31,25 @@
                   <ul class="rslides" id="slider4">
                     <li>
                       <img src="images/banner.jpg" alt="">
-                      <p class="caption">Frase 1</p>
+                      <p class="caption">"Una receta tiene un marco, el cocinero, la cocinera, cómo vive,<br />
+						cual es el ambiente en que vive, cuales son los ingredientes locales."</p>
                     </li>
                     <li>
                       <img src="images/banner2.jpg" alt="">
-                      <p class="caption">Frase 2</p>
+                      <p class="caption">"Cuando piensas que por lo menos 24 chiles que se cultivan en el estado de Oaxaca,<br />
+					que no se dan en otras partes; entonces es tan importante"</p>
                     </li>
                     <li>
                       <img src="images/banner3.jpg" alt="">
-                      <p class="caption">Frase 3</p>
+                      <p class="caption">"Nadie se ha dedicado a la conservación de los ingredientes. Esto me preocupa mucho"</p>
                     </li>
                     <li>
                       <img src="images/banner4.jpg" alt="">
-                      <p class="caption">Frase 4</p>
+                      <p class="caption">“La clave de la comida es el mercado”</p>
                     </li>
                     <li>
                       <img src="images/banner5.jpg" alt="">
-                      <p class="caption">Frase 5</p>
+                      <p class="caption">"Ya creo que ya es tiempo de apreciar. En su supermercado tienen ingredientes de todo el mundo, pero no tienen los ingredientes de México."</p>
                     </li>
                   </ul>
 
@@ -69,45 +71,7 @@
                     </div>                
 
 
-                    <!--<div class="row">
-                        
-                        <section class="6u">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/categoria.jpg" alt="" /></a>
-								<div class="inner">
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</div>
-						</section>
-                        
-                        <section class="6u">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/categoria_s2.jpg" alt="" /></a>
-								<div class="inner">
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</div>
-						</section>
-                        
-                        <section class="6u">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/categoria_s3.jpg" alt="" /></a>
-								<div class="inner">
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</div>
-						</section>
-                        
-                        <section class="6u">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/categoria_s4.jpg" alt="" /></a>
-								<div class="inner">
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</div>
-						</section>
-                    </div>
-                      -->
+                   <iframe width="400" height="225" src="http://www.youtube.com/embed/x7ftH4oXJg4?rel=0" frameborder="0" allowfullscreen></iframe>
                     
 			  </div>
 				</div>

@@ -15,15 +15,18 @@
 						<div class="6u">
 							<div id="miniaturas">
 								<ul style="padding-left:20px">
-								<li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>En busca de los ingredientes y las recetas tradicionales</strong> (20 min | 30 min)</li>
+								<li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>En busca de los ingredientes y las recetas tradicionales</strong></li>
+                                20 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 min<br />
                                 <a href="//www.youtube.com/embed/x7ftH4oXJg4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/x7ftH4oXJg4/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/wOtEIp6MbV0?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/wOtEIp6MbV0/default.jpg"></a>
                                 
-                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>Rancho Quinta Diana, árboles y cultivos</strong> (20 min | 27 min)</li>
+                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>Rancho Quinta Diana, árboles y cultivos</strong></li>
+                                20 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27 min<br />
                                 <a href="//www.youtube.com/embed/iWsy9mAVsCc?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/iWsy9mAVsCc/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/oMX0lf-4q38?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/oMX0lf-4q38/default.jpg"></a>
                                 
-                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>El chile, pilar de la comida tradicional mexicana</strong> (20 min | 25 min)</li>
+                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>El chile, pilar de la comida tradicional mexicana</strong></li>
+                                20 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 min<br />
                                 <a href="//www.youtube.com/embed/-BqVRKFYd8E?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/-BqVRKFYd8E/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/2INapanYHF4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/2INapanYHF4/default.jpg"></a> 
 								</ul>
