@@ -42,7 +42,7 @@
                                 <span class="image featured"><img src="images/quinta_dk3.jpg" alt="" /></span>
                                 
                               <h3>Invernadero</h3>
-                                        <p>Hay oreja de le&oacute;n, palma, cilantro extranjero, lima, pasiflorina, pl&aacute;tano de varios tipos, y chile manzano, habanero y dulce.</p>
+                                        <p>Hay oreja de le&oacute;n, palma, cilantro extranjero, lima, pasiflorina, pl&aacute;tano de varios tipos y chile manzano, habanero y dulce.</p>
                                         
                                <h3>Kanch&eacute; o canch&eacute;</h3>
                                         <p>El kanch&eacute; es una estructura elevada de madera de origen maya para el cultivo de plantas. En ella se coloca de 15 a 20 cm de tierra con abonos org&aacute;nicos. En el kanch&eacute; de la Quinta Diana se cultivan fresas, berros y jitomates silvestres.</p>

@@ -65,7 +65,7 @@
 	#header {
 		display: none;
 	}
-
+	
 /* Banner */
 
 	#banner {
@@ -125,6 +125,8 @@
 			text-align: center;
 			color: #fff;
 			z-index: 1;
+			width:80%;
+			height:auto;
 		}
 
 			#titleBar .title em {

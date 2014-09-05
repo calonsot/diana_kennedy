@@ -11,7 +11,7 @@
 
 	body,
 	#skel-layers-wrapper {
-		background: #f7f7f7 url("images/bg01.png");
+		background: #900000 url("images/bg01.png");
 	}
 
 	body.is-loading * {
@@ -563,10 +563,10 @@
 		text-align: center;
 		padding: .2em 0 0 0;
 		background-color: #900000;
-		background-image: url("images/bg02.png"), url("images/bg02.png"), url("images/bg01.png");
-		background-position: top left,					top left,					top left;
-		background-size: 100% 6em,					100% 6em,					auto;
-		background-repeat: no-repeat,					no-repeat,					repeat;
+		background-image: url("images/bg01.png");
+		background-position: top left,;
+		background-size: 100% 6em auto;
+		background-repeat: repeat-x;
 	}
 
 		#header h1 {
@@ -618,10 +618,11 @@
 					padding: 0.7em 0.5em 0.7em 0.5em;
 				}
 
-				.suggestelement {
+				.suggestelement a {
 					font-size:.9em;
 					padding:0 0 .3em 0;
 					color:#999;
+					line-height:.9em;
 				}
 					
 				#nav > ul > li:first-child {
@@ -851,10 +852,10 @@
 
 		#suggestions {
 			width:400px;
-			height:280px;
+			/*/height:280px;*/
 			overflow: auto;
 		}
-
+		
 		.active-links {
 			/*position:relative;
 			right:150px;

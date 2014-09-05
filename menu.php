@@ -41,13 +41,9 @@ $sessionId = session_id();
 
 		<!-- Logo -->
 		<div id="logo">
-			<img src="images/logo-01.png" usemap="#Map">
-			<map name="Map">
-				<area shape="rect" coords="42,21,363,91" href="index.php">
-				<area shape="rect" coords="704,15,792,85"
-					href="http://www.conabio.gob.mx" target="_blank">
-			</map>
-</div>
+        <span class="ldk"><a href="index.php"><img src="images/logo-01.png"></a></span>
+        <span class="lconabio"><a href="index.php" target="http://www.conabio.gob.mx/"><img src="images/logo-02.png"></a></span>
+		</div>
 
 		<!-- Nav -->
 		<nav id="nav">

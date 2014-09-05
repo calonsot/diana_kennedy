@@ -135,12 +135,25 @@
                                         <h3>Pérdida de ingredientes autóctonos</h3>
                                         <p>La comparación de los ingredientes incluidos en las recetas de Diana Kennedy con los ingredientes documentados en los mercados muestra una reducción en la diversidad de ingredientes (tal vez debido en parte a la época de colecta). También se documentaron algunos ingredientes no colectados por Diana anteriormente. En los estados de Oaxaca, Puebla y Veracruz, la mayor parte de los ingredientes son cultivados, mientras que en Guerrero e Hidalgo, existe una proporción similar entre ingredientes cultivados y plantas silvestres.</p>
                                         
-                                        <h3>Participantes</h3>
+                                  </article>                                 
+						  </div>
+						</div>
+					</div>
+                    
+                    
+                    
+                    <div class="row double">
+                    
+                    <div class="6u">
+                    <h3>Participantes</h3>
                       <p><strong>Diana Kennedy</strong><br>
                                           <a href="http://www.ib.unam.mx/directorio/18" target="_blank">Dr. Robert Bye  Boettler</a><br>
                                           <a href="http://www.ib.unam.mx/directorio/91" target="_blank">M. en C. Edelmira Linares</a><br>
                         <a href="http://www.cicy.mx/jardin-botanico/personal" target="_blank">Bi&oacute;l. Clarisa Jim&eacute;nez Ba&ntilde;uelos</a> | captura de  datos, sistematizaci&oacute;n de informaci&oacute;n y apoyo a la colecta de ejemplares  bot&aacute;nicos<br>
                       </p>
+                     </div>
+                     
+                     <div class="6u">
                       <p><strong>Con el apoyo de:</strong><br>
                                           M. en C. Nicol&aacute;s Palleiro | video<br>
                                           LDG. Laura Rojas Paredes | fotograf&iacute;a<br>
@@ -148,14 +161,13 @@
                                           M. en C. Laura C&aacute;rdenas | revisi&oacute;n  del material<br>
                                           <strong>Comisi&oacute;n Nacional para el  Conocimiento y Uso de la Biodiversidad</strong></p>
 						<p>Lic. Manuel Amaya | post producci&oacute;n video</p>
-                                        
-                                        
-                                  </article>                                 
-						  </div>
-						</div>
-					</div>
-                    
-                    
+                        </div>
+                        
+                       </div>
+                        
+                        
+                        
+                        
                     <article>
                     <hr>
                     <p><strong>Proyecto IE008:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=IE&Numero=8" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy- fase 1</a></p>

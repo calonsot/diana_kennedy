@@ -16,20 +16,26 @@
 							<div id="miniaturas">
 								<ul style="padding-left:20px">
 								<li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>En busca de los ingredientes y las recetas tradicionales</strong> (20 min | 30 min)</li>
+                                <a href="//www.youtube.com/embed/x7ftH4oXJg4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/x7ftH4oXJg4/default.jpg"></a>
+                                <a href="//www.youtube.com/embed/wOtEIp6MbV0?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/wOtEIp6MbV0/default.jpg"></a>
+                                
                                 <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>Rancho Quinta Diana, árboles y cultivos</strong> (20 min | 27 min)</li>
+                                <a href="//www.youtube.com/embed/iWsy9mAVsCc?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/iWsy9mAVsCc/default.jpg"></a>
+                                <a href="//www.youtube.com/embed/oMX0lf-4q38?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/oMX0lf-4q38/default.jpg"></a>
+                                
                                 <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>El chile, pilar de la comida tradicional mexicana</strong> (20 min | 25 min)</li>
+                                <a href="//www.youtube.com/embed/-BqVRKFYd8E?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/-BqVRKFYd8E/default.jpg"></a>
+                                <a href="//www.youtube.com/embed/2INapanYHF4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/2INapanYHF4/default.jpg"></a> 
 								</ul>
-                                <a href="//www.youtube.com/embed/n6Vr1DUtcpg?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/n6Vr1DUtcpg/default.jpg"></a>
-                                <a href="//www.youtube.com/embed/RTNVUllmYFU?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/RTNVUllmYFU/default.jpg"></a>
-                                <a href="//www.youtube.com/embed/0YmCo-Wsms8?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/0YmCo-Wsms8/default.jpg"></a>
-                                <a href="//www.youtube.com/embed/ftdgaewlQt4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/ftdgaewlQt4/default.jpg"></a>
-                                <a href="//www.youtube.com/embed/blV-jV5Uk2E?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/blV-jV5Uk2E/default.jpg"></a>
-                                <a href="//www.youtube.com/embed/n6Vr1DUtcpg?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/n6Vr1DUtcpg/default.jpg"></a> 
+                                
+                                
+                                
 						  </div>
 						</div>
 						<div class="6u">
                           <div id="contenedor">
-								<iframe width="400" height="225" src="http://www.youtube.com/embed/n6Vr1DUtcpg?rel=0" frameborder="0" allowfullscreen></iframe>
+								<span class="image featured"><img src="images/ima_video.jpg" width="400" height="225" /></span>
+                            	<iframe width="400" height="225" src="" frameborder="0" allowfullscreen></iframe>
 						  	</div>
                             
                           
