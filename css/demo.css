@@ -42,7 +42,6 @@ h3 {
   height: 242px;
   width: auto;
   border: 0;
-  background-repeat:repeat-x;
   /*transform: translateX(-40%);*/
   }
 
@@ -58,7 +57,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10px 20px;
+  padding: 10px 20%;
   margin: 0;
   max-width: none;
   }
