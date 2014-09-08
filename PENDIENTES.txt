@@ -1,34 +1,5 @@
 PENDIENTES DE LA APGINA DE DIANA KENNEDY
 
-- Nuevo orden de las categorias:
-Bebidas
-Panes
-Salsas
-Botanas
-Sopas
-Ensaladas
-Guisados
-Antojitos
-Pescados y mariscos
-Huevos
-Frijoles
-Guisados
-Postres
-
-- En listarecetas.php Que el Titulo sea "n recetas publicas de m posibles" 
-- En listarecetas.php donde dice: "Ver listado de recetas no publicadas en el sitio Dianna Kennedy:#" que ahora diga: 
-	"Otras recetas de Diana Kennedy no publicadas en este sitio (#)"
-- En muestrareceta.php en la recomendaciones que el nombre de las recetas este justidficado a la izquierda para quitar los espacios en blanco
-- En muestrareceta.php abajo de las recomendaciones que este la lista de ingredientes de la receta en cuestion, 
-	con un link del ingrediente hacia el banco de imagenes con el URL como sigue:
-	http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=cebolla	
-	* search=cebolla     <--------- es el ingrediente
-- Las recetas que son publicas y no tienen PDF poner el nombre de la receta y un mensaje de proximamente y el link deshabilitado, e.g.
-	Atole colorado - Proximamente
-- Sigue saliendo un error de mysql:
-	http://localhost/diana_kennedy/muestrareceta.php?urlreceta=MexicoUnaOdiseaCulinaria/Tamalesdefrijol_EstadodePuebla.pdf&nombrereceta=Tamales%20de%20frijol&filtro=(%20idcategoria%20=%200%20OR%20ingredientelocal%20like
 - proyecto.php tendra un link en el que pudan ver la lista completa de ingredientes de las rectas, y los ingredientes
-	a su vez tendran un link cada uno a las imegenes que existan en el Banco de Imagenes, con las mismas especificaciones de la URL de arriba.
-
-	
-
+	a su vez tendran un link cada uno a las imagenes que existan en el Banco de Imagenes, con las mismas especificaciones de la URL de arriba.
+- Cuando se minimiza la ventana el buscador desaparece totalmente
