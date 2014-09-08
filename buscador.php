@@ -29,7 +29,7 @@ echo "<option value='0'>Elige</option>";
 while($registro=mysql_fetch_array($consulta))
 {
 	// Convierto los caracteres conflictivos a sus entidades HTML correspondientes para su correcta visualizacion
-	$registro[1]=htmlentities($registro[1]);
+	$registro[1]=$registro[1];
 	echo "<option value='".$registro[0]."'>".$registro[1]."</option>";
 }
 echo '							</select></label>';
