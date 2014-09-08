@@ -17,5 +17,7 @@
 		
 			</div>
 
+			<script src="http://bdi.conabio.gob.mx/fotoweb/googleAnalytics.js"></script>
+			<script src="js/gAnalytics.js"></script>
 	</body>
 </html>
