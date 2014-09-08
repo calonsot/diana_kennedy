@@ -69,7 +69,6 @@
 							$bandera = false;
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
-							$row['recetanombre']=htmlentities($row['recetanombre']);														
 							if(!is_null($row['URL']))						
 								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 							else
@@ -88,7 +87,6 @@
 							$bandera = true;
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
-							$row['recetanombre']=htmlentities($row['recetanombre']);														
 							if(!is_null($row['URL']))						
 								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
 							else
