@@ -1,10 +1,12 @@
 function cambio (url){
 		document.getElementById('contenedor').innerHTML='<iframe width="400" height="225" src="' +  url + '" frameborder="0" allowfullscreen></iframe>';
+		$( 'body' ).responsiveVideo();
 		return false;
 						 }
 
 function cambio2 (url){
 	  document.getElementById('contenedor2').innerHTML='<iframe width="400" height="225" src="' +  url + '" frameborder="0" allowfullscreen></iframe>';
+	  $( 'body' ).responsiveVideo();
 	  return false;
 }
 
