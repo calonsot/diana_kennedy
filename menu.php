@@ -42,7 +42,8 @@ $sessionId = session_id();
 		<!-- Logo -->
 		<div id="logo">
         <span class="ldk"><a href="index.php"><img src="images/logo-01.png"></a></span>
-        <span class="lconabio"><a href="index.php" target="http://www.conabio.gob.mx/"><img src="images/logo-02.png"></a></span>
+        <span class="lconabio"><a href="http://www.conabio.gob.mx/" target="_blank"><img src="images/logo-02.png"></a></span>
+
 		</div>
 
 		<!-- Nav -->

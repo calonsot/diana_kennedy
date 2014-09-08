@@ -144,7 +144,7 @@
 			font-size: 1.5em;
 			letter-spacing: -0.025em;
 		}
-
+	
 	footer {
 		margin: 0 0 3em 0;
 	}
@@ -970,7 +970,7 @@
 	    font-size: 15px;
 	    line-height: 20px;
 	    padding: 0 20px;
-	    text-align: left;
+	    text-align: justify;
 	}
 
 	.izq {
@@ -996,20 +996,19 @@
 	    font-size: 15px;
 	    line-height: 20px;
 	    padding: 0 5px;
-	    text-align: left;
+	    text-align: justify;
 	}
 
 	.izq2 {
 	    float: left;
-	    width: 75%;
+	    width: 80%;
 	}
 
 	.izq2 .micontenido2 {
-	    border-right: 5px solid #ffffff;	     
+	    border-right: 5px solid #ffffff;
 	}
 
 	.der2 {
 	    float: right;
-	    width: 25%;
-	    padding-top: 10%;
+	    width: 20%;
 	}

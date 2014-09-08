@@ -1,6 +1,5 @@
 <?php include('menu.php') ?>
 
-<link rel="stylesheet" href="css/responsiveslides.css">
   <link rel="stylesheet" href="css/demo.css">
   <script src="js/responsiveslides.min.js"></script>
   <script>
@@ -11,7 +10,7 @@
         auto: true,
         pager: false,
         nav: true,
-        speed: 2000,
+        speed: 1000,
         namespace: "callbacks",
         before: function () {
           $('.events').append("<li>before event fired.</li>");
@@ -31,19 +30,19 @@
                   <ul class="rslides" id="slider4">
                    	<li style="background-image:images/banner5.jpg; background-repeat:repeat-x">
                       <img src="images/banner5.jpg" alt="">
-                      <p class="caption">"Ya creo que ya es tiempo de apreciar. En su supermercado tienen ingredientes de todo el mundo, pero no tienen los ingredientes de México."</p>
+                      <p class="caption">"Yo creo que ya es tiempo de apreciar. En su supermercado tienen ingredientes de todo el mundo, pero no tienen los ingredientes de México."</p>
                     </li>
                     <li>
                       <img src="images/banner2.jpg" alt="">
-                      <p class="caption">"Cuando piensas que por lo menos 24 chiles que se cultivan en el estado de Oaxaca, que no se dan en otras partes; entonces es tan importante"</p>
+                      <p class="caption">"Cuando piensas que por lo menos 24 chiles que se cultivan en el estado de Oaxaca, que no se dan en otras partes; entonces es tan importante."</p>
                     </li>
                     <li>
                       <img src="images/banner3.jpg" alt="">
-                      <p class="caption">"Nadie se ha dedicado a la conservación de los ingredientes. Esto me preocupa mucho"</p>
+                      <p class="caption">"Nadie se ha dedicado a la conservación de los ingredientes. Esto me preocupa mucho."</p>
                     </li>
                     <li>
                       <img src="images/banner4.jpg" alt="">
-                      <p class="caption">“La clave de la comida es el mercado”</p>
+                      <p class="caption">“La clave de la comida es el mercado.”</p>
                     </li>
                      <li>
                       <img src="images/banner.jpg" alt="">
