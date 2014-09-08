@@ -28,8 +28,8 @@ $filtro = $_GET["filtro"];
 						</div>
 						<div class='der2'>
 							<div class='micontenido2'>
-							<p>Otras recetas recomendadas</p>
-							<?php								
+							<p><b>Otras recetas</b></p>
+							<?php															
 								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
 								$i = 1;
 								$j = 1;
@@ -43,12 +43,27 @@ $filtro = $_GET["filtro"];
 											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".htmlentities($registros[1])."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
 										}
 										else
-											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
+											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])." - Próximamente</a><br><br>";
 									}
 									$i += 1;
 								    if ($i == 4)
 								    	$i = 1;
 								}
+
+
+								
+								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE recetanombre = '".$nombrereceta."'", $conexion);
+								$listaingrediente = mysql_result($ingredientes,0);	
+								if (!empty($listaingrediente))
+								{
+									echo "<br><p><b>Ingredientes</b></p>";									
+									$lista=explode(",", $listaingrediente);
+									foreach ($lista as $valor) {
+ 									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."'>".$valor."</a>.";
+									}
+								}
+								
+								
 							?>	
 							</div>						
 						</div>

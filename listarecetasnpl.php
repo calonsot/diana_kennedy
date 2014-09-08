@@ -36,7 +36,7 @@
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
 							$row['recetanombre']=htmlentities($row['recetanombre']);														
-							echo "<a href='#'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							echo "<p style = 'color: #900000;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
 						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";							
 						    echo "</div>";
 						    echo "</div>";							
@@ -47,7 +47,7 @@
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
 							$row['recetanombre']=htmlentities($row['recetanombre']);							
-							echo "<a href='#'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							echo "<p style = 'color: #900000;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
 						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";													    
 						    echo "</div>";
 						    echo "</div>";	

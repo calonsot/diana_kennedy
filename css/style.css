@@ -970,7 +970,7 @@
 	    font-size: 15px;
 	    line-height: 20px;
 	    padding: 0 20px;
-	    text-align: justify;
+	    text-align: left;
 	}
 
 	.izq {
@@ -996,20 +996,21 @@
 	    font-size: 15px;
 	    line-height: 20px;
 	    padding: 0 5px;
-	    text-align: justify;
+	    text-align: left;
 	}
 
 	.izq2 {
 	    float: left;
-	    width: 80%;
+	    width: 75%;
 	}
 
 	.izq2 .micontenido2 {
-	    border-right: 5px solid #ffffff;
+	    border-right: 5px solid #ffffff;	     
 	}
 
 	.der2 {
 	    float: right;
 	    width: 20%;
+	    width: 25%;
 	    padding-top: 10%;
 	}
