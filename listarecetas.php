@@ -1,8 +1,9 @@
 <?php include('menu.php') ?>
 <?php
-
-	$filtro = $_GET["filtro"];			
-	$sql = "SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
+	
+	$filtro = isset($_GET["filtro"])? $_GET["filtro"]: "Publico = 1" ;
+	$filtro = str_replace("'", "\"", $filtro);			
+	$sql = "SELECT URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
 	//Conexión a la base de datos 
 	$con = $conexion; 	
 
@@ -23,7 +24,7 @@
 	$_pagi_conteo_alternativo = true;//recomendado false.
 	 
 	//Supongamos que sólo nos interesa propagar estas dos variables
-	$_pagi_propagar = array("URL","recetanombre", "publico");//No importa si son POST o GET
+	$_pagi_propagar = array("URL","recetanombre", "publico", "libro");//No importa si son POST o GET
 	 
 	//Definimos qué estilo CSS se utilizará para los enlaces de paginación.
 	//El estilo debe estar definido previamente
@@ -44,16 +45,16 @@
 		<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
-                <header>
-						<h4 align="center"><?php 
-										      /*if ($_pagi_totalReg <=5)
-												echo " <span class=fuente8><b>Se encontraron $_pagi_totalReg recetas.</b></span>";
-											else
-						                    	echo $_pagi_info;*/ 
-						                  ?></h4>
-				</header>
-		                <br>
-                                <br>
+                <?php 
+                    $total1 = mysql_num_rows(mysql_query($sql));		
+                    //Recetas no publicas
+					$filtro_ = str_replace("Publico = 1", "Publico = 0", $filtro);								
+					$sql = "SELECT recetanombre FROM diannakennedy WHERE ".$filtro_;		
+					$total = mysql_num_rows(mysql_query($sql));	
+					echo "<p align='center' style = 'color: #900000;'>Se encontraron $total1 recetas publicas de ".($total+$total1)." posibles.</p>";
+				?>
+		        <br>
+                <br>
 
 				<?php 					
 					echo "<div class='micaja'>";
@@ -62,18 +63,23 @@
 					$i = 1;
 				    $bandera = true;
 					while($row = mysql_fetch_array($_pagi_result))
-					{ 							
+					{ 														
 						if ($bandera == true)
 						{
 							$bandera = false;
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
-							$row['recetanombre']=htmlentities($row['recetanombre']);
-							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);														
+							if(!is_null($row['URL']))						
+								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							else
+								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+							
 							if ($row['publico']==1)
-						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripci�n... </p><br><br>";
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
 							else
 								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    
 						    echo "</div>";
 						    echo "</div>";							
 						}
@@ -82,12 +88,17 @@
 							$bandera = true;
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
-							$row['recetanombre']=htmlentities($row['recetanombre']);
-							echo "<a href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							$row['recetanombre']=htmlentities($row['recetanombre']);														
+							if(!is_null($row['URL']))						
+								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+							else
+								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+						    
 						    if ($row['publico']==1)
-						    	echo "<p>&nbsp;&nbsp;&nbsp;Tal vez una breve descripci�n... </p><br><br>";
+						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
 							else
 								echo "<p>&nbsp;&nbsp;&nbsp;No esta disponible esta receta </p><br><br>";
+						    
 						    echo "</div>";
 						    echo "</div>";	
 						}
@@ -99,9 +110,16 @@
 
 					echo "</div>";
 
-					//Incluimos la barra de navegación 
-					echo"<center><p>".$_pagi_navegacion."</p></center>";
-					//echo"<p>Mostrando Registrados ".$_pagi_info."</p>";
+									
+					if($total!=0)
+						echo "<p align='center'><a target='_blank' href='listarecetasnpl.php?filtro=".$filtro_."'>Otras recetas de Dianna Kennedy no publicadas en este sitio $total.</a></p>";
+
+					if ($_pagi_totalReg >10)
+					{
+						//Incluimos la barra de navegación 
+						echo"<center><p>".$_pagi_navegacion."</p></center>";
+						//echo"<p>Mostrando Registrados ".$_pagi_info."</p>";
+					}
 				?>                
                
 			</section>			

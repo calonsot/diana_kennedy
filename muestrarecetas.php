@@ -8,10 +8,9 @@ $filtro = $_GET["filtro"];
 		<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
-					<p>&nbsp;</p>	
-	                
- 	               		
-    				<div class='micaja2'>
+					<p>&nbsp;</p>		               		    				
+			        
+			        <div class='micaja2'>
 	               		<div class='izq2'>
 	               			<div class='micontenido2'>
 			               	<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
@@ -25,33 +24,10 @@ $filtro = $_GET["filtro"];
 		  						echo "</object>";
 							?>
 							</div>	
-						</div>
+						</div>			
 						<div class='der2'>
-							<div class='micontenido2'>
-							<p><b>Otras recetas</b></p>
+							<div class='micontenido2'>						
 							<?php															
-								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
-								$i = 1;
-								$j = 1;
-								while($registros=mysql_fetch_array($consultarec))
-								{									
-									$j += 1;
-									if ($j <= 5)
-									{
-										if(!is_null($registros[0]))	
-										{																											
-											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".htmlentities($registros[1])."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])."</a><br><br>";
-										}
-										else
-											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".htmlentities($registros[1])." - Próximamente</a><br><br>";
-									}
-									$i += 1;
-								    if ($i == 4)
-								    	$i = 1;
-								}
-
-
-								
 								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE recetanombre = '".$nombrereceta."'", $conexion);
 								$listaingrediente = mysql_result($ingredientes,0);	
 								if (!empty($listaingrediente))
@@ -62,8 +38,6 @@ $filtro = $_GET["filtro"];
  									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."'>".$valor."</a>.";
 									}
 								}
-								
-								
 							?>	
 							</div>						
 						</div>
