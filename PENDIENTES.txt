@@ -1,5 +1,6 @@
 PENDIENTES DE LA APGINA DE DIANA KENNEDY
 
-- proyecto.php tendra un link en el que pudan ver la lista completa de ingredientes de las rectas, y los ingredientes
-	a su vez tendran un link cada uno a las imagenes que existan en el Banco de Imagenes, con las mismas especificaciones de la URL de arriba.
 - Cuando se minimiza la ventana el buscador desaparece totalmente
+- Cuando autocompletas un ingrediente, a veces salen cosas raras, ej. autocompleta con "pulque", "mixiote"
+- Existen ingredientes en el autocomplete que no llevan a ninguna receta ni privada ni publica, ej. "calabacita"
+
