@@ -35,7 +35,7 @@ $filtro = $_GET["filtro"];
 									echo "<br><p><b>Ingredientes</b></p>";									
 									$lista=explode(",", $listaingrediente);
 									foreach ($lista as $valor) {
- 									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."'>".$valor."</a>.";
+ 									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."'>".$valor."</a><br>";
 									}
 								}
 							?>	
