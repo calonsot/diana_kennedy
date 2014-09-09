@@ -711,7 +711,7 @@
 		/*background-image: url("../images/banner.jpg");*/
 		background-position: center center;
 		background-size: cover;
-		height: 14em;
+		height: 242px;
 		text-align: center;
 		/*position: relative;*/
 	}
@@ -1012,3 +1012,10 @@
 	    float: right;
 	    width: 20%;
 	}
+	
+	#vintro {
+		width:60%;
+		height:auto;
+		margin:0px auto;
+		padding-bottom:1.3em;
+		}

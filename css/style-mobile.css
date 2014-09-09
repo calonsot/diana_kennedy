@@ -63,7 +63,7 @@
 /* Banner */
 
 	#banner {
-		height: 14em;
+		height: 242px;
 	}
 	
 	.rslides {
@@ -104,3 +104,9 @@
 	.wrapper {
 		padding: 1em 0 1px 0;
 	}
+	
+	#vintro {
+		width:100%;
+		height:auto;
+		margin:0px auto;
+		}

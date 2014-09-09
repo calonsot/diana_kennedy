@@ -5,7 +5,7 @@
 				<div class="container">
                 <header>
 						<h2>El Proyecto</h2>
-						<p>Frase</p>
+						<p><em>"Nadie se ha dedicado a la conservación de los ingredientes. Eso me preocupa mucho."</em></p>
 				</header>
                 
 					<div class="row double">
@@ -121,16 +121,16 @@
                                         </table>
 
                                      
-                                        <p>Los ingredientes autóctonos incluyen frijoles: negro, blanco, bayo, flor de mayo, ayocotes; calabaza, chilacayote, flor de calabaza, pepitas, calabacitas; chiles pasilla, ancho, poblano, chilaca, serrano, guajillo, jalapeño, ancho, cora, de árbol, cascabel, chipotle, amarillo, güero, colorado, miahuateco, mora, morita, chilpaya, habanero, amashito y pasilla mixe, entre otros. También hay xocoyoles, xoco, chaya, achiote, hoja blanca, hoja santa, cuajilote, chepiche, ahuahtli, chayote silvestre, flor de colorín, guaje, nopales, xoconostles, trompillos, orégano silvestre, papa silvestre y hongo azul, hongo clavito, hongo pata de pájaro y cuitlacoche. Asimismo se enlistaron algunos ingredientes animales como chicatanas, venado, jumiles, cazón, anguila, acamayas, bagre.</p>
+                                        <p>Los ingredientes autóctonos incluyen frijoles: negro, blanco, bayo, flor de mayo, ayocotes; calabaza, chilacayote, flor de calabaza, pepitas, calabacitas; chiles pasilla, ancho, poblano, chilaca, serrano, guajillo, jalapeño, ancho, cora, de árbol, cascabel, chipotle, amarillo, güero, colorado, miahuateco, mora, morita, chilpaya, habanero, amashito y pasilla mixe, entre otros. También hay xoco, chaya, achiote, hoja blanca, hoja santa, cuajilote, chepiche, ahuahtli, chayote silvestre, flor de colorín, guaje, nopales, xoconostles, trompillos, orégano silvestre, papa silvestre y hongo azul, hongo clavito, hongo pata de pájaro y cuitlacoche. Asimismo se enlistaron algunos ingredientes animales como chicatanas, venado, jumiles, cazón, anguila, acamayas, bagre.</p>
                                         
                                         <h3>Notas</h3>
                                         <span class="image featured"><img src="images/proyecto_dk5.jpg" alt="" /></span>
-                                        <p>Se revisaron y transcribieron 688 notas de campo de Diana Kennedy de 15 estados. En sus notas Diana presenta comentarios sobre los mercados, las personas, el costo de ingredientes, listados de platillo locales, recetas con ingredientes locales y platillos poco convencionales.</p>
+                                        <p>Se revisaron y transcribieron 688 notas de campo de Diana Kennedy de 15 estados. En sus notas Diana presenta comentarios sobre los mercados, las personas, el costo de ingredientes, listados de platillos locales, recetas con ingredientes locales y platillos poco convencionales.</p>
                                         
                                         
                                         <h3>Fotografías</h3>
                                         <span class="image featured"><img src="images/proyecto_dk6.jpg" alt="" /></span>
-                                        <p>Se escanearon diapositivas de Diana Kennedy sobre ingredientes, recorridos en mercados, procedimientos culinarios, plantas cultivadas en su huerto. Además se reunieron fotografías digitales y se consolidó un acervo fotográfico que consta de <a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">2,279 fotografías</a>, actualmente incluidas en el Banco de Imágenes de la CONABIO.</p>
+                                        <p>Se escanearon diapositivas de Diana Kennedy sobre ingredientes, recorridos en mercados, procedimientos culinarios, plantas cultivadas en su huerto. Además se reunieron fotografías digitales y se consolidó un acervo fotográfico que consta de <a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">2,261 fotografías</a>, actualmente incluidas en el Banco de Imágenes de la CONABIO.</p>
                                           
                                         <h3>Pérdida de ingredientes autóctonos</h3>
                                         <p>La comparación de los ingredientes incluidos en las recetas de Diana Kennedy con los ingredientes documentados en los mercados muestra una reducción en la diversidad de ingredientes (tal vez debido en parte a la época de colecta). También se documentaron algunos ingredientes no colectados por Diana anteriormente. En los estados de Oaxaca, Puebla y Veracruz, la mayor parte de los ingredientes son cultivados, mientras que en Guerrero e Hidalgo, existe una proporción similar entre ingredientes cultivados y plantas silvestres.</p>
@@ -156,7 +156,7 @@
                      <div class="6u">
                       <p><strong>Con el apoyo de:</strong><br>
                                           M. en C. Nicol&aacute;s Palleiro | video<br>
-                                          LDG. Laura Rojas Paredes | fotograf&iacute;a<br>
+                                          L. en D. Laura Rojas Paredes | fotograf&iacute;a<br>
                                           Bi&oacute;l. Iv&aacute;n Montes de Oca | fotograf&iacute;a<br>
                                           M. en C. Laura C&aacute;rdenas | revisi&oacute;n  del material<br>
                                           <strong>Comisi&oacute;n Nacional para el  Conocimiento y Uso de la Biodiversidad</strong></p>
@@ -170,7 +170,7 @@
                         
                     <article>
                     <hr>
-                    <p><strong>Proyecto IE008:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=IE&Numero=8" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy- fase 1</a></p>
+                    <p><strong>Proyecto IE008:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=IE&Numero=8" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy-fase 1</a></p>
                     <p><strong>Proyecto KX001:</strong> <a href="http://www.conabio.gob.mx/institucion/cgi-bin/datos2.cgi?Letras=KX&Numero=1" target="_blank">Documentación de la biodiversidad de la gastronomía mexicana: rescate de los archivos culinarios de Diana Kennedy-fase 2</a></p>
                     </article>
                     

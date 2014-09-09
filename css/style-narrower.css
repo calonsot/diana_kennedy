@@ -71,7 +71,7 @@
 /* Banner */
 
 	#banner {
-		height: 14em;
+		height: 242px;
 	}
 
 		#banner header h2 {
@@ -228,3 +228,4 @@
 				display: inline-block;
 				width: 5em;
 			}
+	

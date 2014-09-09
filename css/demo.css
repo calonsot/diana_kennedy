@@ -1,12 +1,6 @@
 
 /* Callback example */
 
-h3 {
-  font: 20px/30px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #fff;
-  }
-
 .events {
   list-style: none;
   }
@@ -51,7 +45,6 @@ h3 {
   position: absolute;
   z-index: 2;
   font-size: 1em;
-  text-shadow: none;
   color: #fff;
   background: #000;
   background: rgba(0,0,0, .8);
@@ -61,6 +54,7 @@ h3 {
   padding: 10px 20%;
   margin: 0;
   max-width: none;
+  font-style:italic;
   }
 
 .callbacks_nav {

@@ -5,7 +5,7 @@
 				<div class="container">
                 <header>
 					<h2>&iquest;Qui&eacute;n es Diana Kennedy?</h2>
-					<p>Frase</p>
+					<p><em>"La clave de la comida es el mercado"</em></p>
 				</header>
 					<div class="row double">
 						<div class="6u">
@@ -135,7 +135,7 @@
                                             <p class="hanging-indent"><strong>2012</strong> Medalla de Oro del Vatel Club de M&eacute;xico.</p>
                                             <p class="hanging-indent"><strong>2013</strong> El Molcajete de Plata por la Asociaci&oacute;n Mexicana de Gastronom&iacute;a, Cofrad&iacute;a de Gourmets de la Zona Rosa y el Club de Industriales.</p>
                                             <p class="hanging-indent"><strong>2013</strong> a la fecha, un sin n&uacute;mero de reconocimientos por institutos gastron&oacute;micos de todo el pa&iacute;s.</p>
-                                            <p class="hanging-indent"><strong>?</strong> Reconocimiento del Club de la Buena Mesa, Guadalajara, Jalisco.</p>
+                                            <p class="hanging-indent">Reconocimiento del Club de la Buena Mesa, Guadalajara, Jalisco.</p>
                   				</article>
 
                 </div>

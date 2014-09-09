@@ -20,12 +20,12 @@
                                 <a href="//www.youtube.com/embed/x7ftH4oXJg4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/x7ftH4oXJg4/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/wOtEIp6MbV0?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/wOtEIp6MbV0/default.jpg"></a>
                                 
-                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>Rancho Quinta Diana, árboles y cultivos</strong></li>
+                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em; padding-top:1em"><strong>Rancho Quinta Diana, árboles y cultivos</strong></li>
                                 20 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27 min<br />
                                 <a href="//www.youtube.com/embed/iWsy9mAVsCc?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/iWsy9mAVsCc/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/oMX0lf-4q38?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/oMX0lf-4q38/default.jpg"></a>
                                 
-                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><strong>El chile, pilar de la comida tradicional mexicana</strong></li>
+                                <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em; padding-top:1em"><strong>El chile, pilar de la comida tradicional mexicana</strong></li>
                                 20 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 min<br />
                                 <a href="//www.youtube.com/embed/-BqVRKFYd8E?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/-BqVRKFYd8E/default.jpg"></a>
                                 <a href="//www.youtube.com/embed/2INapanYHF4?rel=0" onClick="return cambio(this.href)"><img src="//i.ytimg.com/vi/2INapanYHF4/default.jpg"></a> 
@@ -76,7 +76,8 @@
 								  <h3><a href="http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=Diana%20Kennedy" target="_blank">Galería</a></h3>
                            		  <h3>Ligas relacionadas</h3>
                                     	<ul style="padding-left:20px">
-                                          <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/alimentos.html">Alimentos</a></li>
+                                           <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/cocinaTradicional.html">La cocina tradicional mexicana</a></li>
+                                           <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/usos/alimentos.html">Alimentos</a></li>
                                           <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="http://www.biodiversidad.gob.mx/genes/centrosOrigen/centrosOrig.html">Centros de domesticaci&oacute;n</a></li>
 										  <li style="list-style-type:disc; list-style-position:outside; padding-bottom:.5em"><a href="https://www.academia.edu/2547625/Comida_cultura_y_modernidad_en_Mexico._Perspectivas_antropologicas_e_historicas" target="_blank">Comida, cultura y modernidad en México. Perspectivas antropológicas e históricas</a></li>
                                         </ul>
