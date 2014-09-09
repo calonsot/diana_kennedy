@@ -40,10 +40,10 @@ $filtro = $_GET["filtro"];
 									{
 										if(!is_null($registros[0]))	
 										{																											
-											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".$registros[1]."</a><br><br>";
+											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."' style='word-break: break-all;'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."</a><br><br>";
 										}
 										else
-											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' />&nbsp;&nbsp;&nbsp;".$registros[1]." - Próximamente</a><br><br>";
+											echo "<a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."<br><span style='color:gray;'>Próximamente</span></a><br><br>";
 									}
 									$i += 1;
 								    if ($i == 4)
@@ -59,7 +59,7 @@ $filtro = $_GET["filtro"];
 									echo "<br><p><b>Ingredientes</b></p>";									
 									$lista=explode(",", $listaingrediente);
 									foreach ($lista as $valor) {
- 									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."'>".$valor."</a>.";
+ 									   echo "<a target='_blank' href='http://bdi.conabio.gob.mx/fotoweb/Grid.fwx?archiveId=5062&columns=4&rows=8&search=".trim($valor)."' style='word-break: break-all;'>".$valor."</a><br>";
 									}
 								}
 								
