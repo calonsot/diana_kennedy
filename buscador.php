@@ -2,7 +2,7 @@
 
 echo '<form method="post" action="recetas.php">';
 echo '	<div class="active-links">';
-echo '		<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" />';
+echo '		<input type="text" id="nomreceta" name="nomreceta" size="50" placeholder="Buscar receta o ingredientes" autocomplete="off" />';
 echo '			<div id="signin-dropdown" align="left">';
 echo '				<br><label><span>Categor&iacute;a</span>';
 echo '			        <select name="categoria" id="categoria">';
