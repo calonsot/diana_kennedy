@@ -40,10 +40,10 @@ $filtro = $_GET["filtro"];
 									{
 										if(!is_null($registros[0]))	
 										{																											
-											echo "<a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."' style='white-space: pre-wrap;'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."</a><br><br>";
+											echo "<span style='white-space: pre-wrap;padding:0px;'><a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."</a></span><br><br>";
 										}
 										else
-											echo "<a href='#' style='white-space: pre-wrap;'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."<br><span style='color:gray;'>Próximamente</span></a><br><br>";
+											echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."<br><span style='color:gray;'>Próximamente</span></a></span><br><br>";
 									}
 									$i += 1;
 								    if ($i == 4)

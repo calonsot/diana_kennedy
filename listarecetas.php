@@ -72,9 +72,9 @@
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
 							if(!is_null($row['URL']))						
-								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></span>";
 							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a></span>";
 							
 							if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
@@ -90,9 +90,9 @@
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
 							if(!is_null($row['URL']))						
-								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></span>";
 							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a></span>";
 						    
 						    if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";

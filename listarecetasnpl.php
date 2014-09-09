@@ -35,7 +35,7 @@
 							$bandera = false;
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
-							echo "<p style = 'color: #900000;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
+							echo "<p style = 'color: #900000;white-space: pre-wrap;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
 						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";							
 						    echo "</div>";
 						    echo "</div>";							
@@ -45,7 +45,7 @@
 							$bandera = true;
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
-							echo "<p style = 'color: #900000;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
+							echo "<p style = 'color: #900000;white-space: pre-wrap;'><img src='images/thumb".$i.".jpg' width='20' height='20' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</p>";
 						    echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";													    
 						    echo "</div>";
 						    echo "</div>";	
