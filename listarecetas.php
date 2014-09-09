@@ -1,9 +1,11 @@
 <?php include('menu.php') ?>
 <?php
 	
+	header ('Content-type: text/html; charset=utf-8');
 	$filtro = isset($_GET["filtro"])? $_GET["filtro"]: "Publico = 1" ;
 	$filtro = str_replace("'", "\"", $filtro);			
-	$sql = "SELECT URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";		
+	$sql = "SELECT URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";	
+	
 	//Conexión a la base de datos 
 	$con = $conexion; 	
 

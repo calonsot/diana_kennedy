@@ -2,7 +2,7 @@
 include('menu.php');
 $URL = $_GET["urlreceta"];
 $nombrereceta = $_GET["nombrereceta"];	
-$filtro = $_GET["filtro"];
+$filtro =  isset($_GET["filtro"])? $_GET["filtro"]: "" ;
 ?>
 			
 		<!-- Main -->
@@ -13,15 +13,23 @@ $filtro = $_GET["filtro"];
 			        <div class='micaja2'>
 	               		<div class='izq2'>
 	               			<div class='micontenido2'>
-			               	<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
-			               	<p>&nbsp;</p>	
+			               	
 			               	<?php
 								// PDF resultado
 								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
 								//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
-								echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-		  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
-		  						echo "</object>";
+			               		if (!empty($URL))
+			               		{
+				               		echo "<h3>Receta - ".$nombrereceta."<h3>";
+				               	    echo "<p>&nbsp;</p>";
+									echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
+			  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
+			  						echo "</object>";
+		  						}
+		  						else
+		  						{
+		  							echo "<h3>Receta - ".$nombrereceta." | Próximamente<h3>";
+		  						}
 							?>
 							</div>	
 						</div>			
