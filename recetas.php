@@ -3,6 +3,7 @@
 	if(!session_id())session_start();
 	$sessionId = session_id();
 
+	header ('Content-type: text/html; charset=utf-8');
     include 'config.php';
 
     $nomreceta = isset($_POST["nomreceta"])? $_POST["nomreceta"]: "";	
@@ -14,7 +15,7 @@
 
 	if ($nomreceta != "")
 	{
-		$_where = " recetanombre like '%".$nomreceta."%'";
+		$_where = " recetanombre like '%$nomreceta%'";
 	}
 	else
 	{
@@ -32,9 +33,9 @@
 		if ($ingrediente != '')
 		{
 			if (is_null($_where))
-				$_where = $_where." ingredientelocal like '%".$ingrediente."%'";
+				$_where = $_where." ingredientelocal like '%$ingrediente%'";
 			else
-				$_where = $_where." OR ingredientelocal like '%".$ingrediente."%'";
+				$_where = $_where." OR ingredientelocal like '%$ingrediente%'";
 		}
 	}
 
@@ -43,9 +44,12 @@
 		else
 			$_where = "(".$_where.") AND Publico = 1";
 
+	$_where = str_replace("%c", "c", $_where);
+	$_where = str_replace("%C", "C", $_where);
+
 	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$_where." ORDER BY recetanombre";		
 	$consulta=mysql_query($sql, $conexion);							
-	$numRecetas =mysql_num_rows($consulta);
+	$numRecetas =mysql_num_rows($consulta);	
 
 	if ($numRecetas != 1)
 	{		
