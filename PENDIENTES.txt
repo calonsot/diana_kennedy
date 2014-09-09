@@ -3,4 +3,7 @@ PENDIENTES DE LA APGINA DE DIANA KENNEDY
 - Cuando se minimiza la ventana el buscador desaparece totalmente
 - Cuando autocompletas un ingrediente, a veces salen cosas raras, ej. autocompleta con "pulque", "mixiote"
 - Existen ingredientes en el autocomplete que no llevan a ninguna receta ni privada ni publica, ej. "calabacita"
+- Existen recetas que no tienen nombre, ej. Cuando buscas las recetas de oaxaca y das clic en las "no publicas" :
+http://www.biodiversidad.gob.mx/usos/dk/listarecetasnpl.php?filtro=(%20idestado%20=%2015%20OR%20idcategoria%20=%200)%20AND%20Publico%20=%200
+- En la base que te paso Carlos no se si corrigio los ingredientes como, frijoles y frijol, calabacita y calabacitas,etc., deberian estar en singular
 
