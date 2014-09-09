@@ -34,7 +34,7 @@
                     </li>
                     <li>
                       <img src="images/banner2.jpg" alt="">
-                      <p class="caption">"Cuando piensas que por lo menos 24 chiles que se cultivan en el estado de Oaxaca, que no se dan en otras partes; entonces es tan importante."</p>
+                      <p class="caption">"Cuando piensas que por lo menos 24 chiles que se cultivan en el estado de Oaxaca, no se dan en otras partes; entonces es tan importante."</p>
                     </li>
                     <li>
                       <img src="images/banner3.jpg" alt="">

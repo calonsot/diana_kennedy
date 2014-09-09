@@ -25,7 +25,7 @@ $sessionId = session_id();
 </noscript>
 
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-
+<script src="http://bdi.conabio.gob.mx/fotoweb/googleAnalytics.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.dropotron.min.js"></script>
 <script src="js/skel.min.js"></script>
