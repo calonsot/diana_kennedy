@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 header( 'Content-type: text/html; charset=utf-8' );
 require('config.php');
 
@@ -54,8 +54,22 @@ $sessionId = session_id();
 				<li><a href="quinta.php">Quinta</a></li>
 				<li><a href="proyecto.php">Proyecto</a></li>
 				<li><a href="recursos.php">Recursos</a></li>
+				<?php
+					$navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
+					if(
+					stristr($navigator_user_agent, "iphone")or
+					stristr($navigator_user_agent, "ipad")or
+					stristr($navigator_user_agent, "kindle") or
+					stristr($navigator_user_agent, "symbian") or
+					stristr($navigator_user_agent, "android")
+					) 
+					{
+					echo '<li><a href="buscadormobile.php">Buscar receta</a></li>';
+					}
+				?>
 				<li><?php include('buscador.php') ?>
 				</li>
 			</ul>
 		</nav>
 </div>
+</body>
