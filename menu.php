@@ -34,7 +34,7 @@ $sessionId = session_id();
 <script src="js/menu.js" charset="utf-8"></script>
 
 </head>
-<body>
+<body onresize="myFunction()">
 	<!-- Header -->
 	<div id="header">
 
@@ -54,7 +54,7 @@ $sessionId = session_id();
 				<li><a href="proyecto.php">Proyecto</a></li>
 				<li><a href="recursos.php">Recursos</a></li>
 				<?php
-					$navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
+					/*$navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 					if(
 					stristr($navigator_user_agent, "iphone")or
 					stristr($navigator_user_agent, "ipad")or
@@ -64,8 +64,21 @@ $sessionId = session_id();
 					) 
 					{
 					echo '<li><a href="buscadormobile.php">Buscar receta</a></li>';
-					}
+					}*/
 				?>
+				<script>
+					function myFunction() {
+						var w = window.outerWidth;
+						var h = window.outerHeight;
+						if( w < 874){
+						document.getElementById("ruta").style.display = "";
+						}
+						else
+						document.getElementById("ruta").style.display = "none";
+					}
+				</script>
+				<li id="ruta" style="display:none"><a href="buscadormobile.php">Buscar receta</a></li>
+				<!--li id="prueba"><a href="buscadormobile.php">no jala????</a></li-->
 				<li><?php include('buscador.php') ?>
 				</li>
 			</ul>
