@@ -1,8 +1,16 @@
 <?php 
 include('menu.php');
-$URL = $_GET["urlreceta"];
-$nombrereceta = $_GET["nombrereceta"];	
-$filtro = $_GET["filtro"];
+$URL = isset($_GET["urlreceta"])? $_GET["urlreceta"]: '';
+$nombrereceta = isset($_GET["nombrereceta"])? $_GET["nombrereceta"]: '';
+$filtro = isset($_GET["filtro"])? $_GET["filtro"]: '';
+
+$navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
+if(stristr($navigator_user_agent, "trident"))
+{
+$URL = utf8_encode($URL);
+$nombrereceta = utf8_encode($nombrereceta);
+$filtro = utf8_encode($filtro);
+}
 ?>
 			
 		<!-- Main -->
@@ -30,6 +38,7 @@ $filtro = $_GET["filtro"];
 							<div class='micontenido2'>
 							<p><b>Otras recetas</b></p>
 							<?php															
+								//echo $filtro;
 								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
 								$i = 1;
 								$j = 1;
