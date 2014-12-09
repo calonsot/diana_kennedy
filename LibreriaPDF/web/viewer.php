@@ -18,6 +18,7 @@ Adobe CMap resources are covered by their own copyright and license:
 http://sourceforge.net/adobe/cmap/wiki/License/
 -->
 <?php
+header( 'Content-type: text/html; charset=utf-8' );
 $URL = $_GET["url"];
 ?>
 <html dir="ltr" mozdisallowselectionprint moznomarginboxes>
