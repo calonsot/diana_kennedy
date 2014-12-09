@@ -1,15 +1,16 @@
 <?php 
 include('menu.php');
-$URL = isset($_GET["urlreceta"])? $_GET["urlreceta"]: '';
-$nombrereceta = isset($_GET["nombrereceta"])? $_GET["nombrereceta"]: '';
-$filtro = isset($_GET["filtro"])? $_GET["filtro"]: '';
+$URL = $_GET["urlreceta"];
+$nombrereceta = $_GET["nombrereceta"];	
+$filtro = $_GET["filtro"];
+$flag=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
-if(stristr($navigator_user_agent, "trident"))
-{
+if(stristr($navigator_user_agent, "trident")){
 $URL = utf8_encode($URL);
-$nombrereceta = utf8_encode($nombrereceta);
+$nombrereceta = utf8_encode($nombrereceta);	
 $filtro = utf8_encode($filtro);
+$flag=1;
 }
 ?>
 			
@@ -25,12 +26,16 @@ $filtro = utf8_encode($filtro);
 			               	<h3><?php echo "Receta - ".$nombrereceta; ?></h3>
 			               	<p>&nbsp;</p>	
 			               	<?php
-								// PDF resultado
+								if($flag==0){// PDF resultado
 								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
 								//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
 								echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
 		  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
 		  						echo "</object>";
+								}
+								else{
+									echo "<iframe src='http://localhost/dianak/LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
+								}
 							?>
 							</div>	
 						</div>
@@ -38,7 +43,6 @@ $filtro = utf8_encode($filtro);
 							<div class='micontenido2'>
 							<p><b>Otras recetas</b></p>
 							<?php															
-								//echo $filtro;
 								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
 								$i = 1;
 								$j = 1;
