@@ -34,7 +34,7 @@ $flag=1;
 		  						echo "</object>";
 								}
 								else{
-									echo "<iframe src='http://localhost/dianak/LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
+									echo "<iframe src='LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
 								}
 							?>
 							</div>	

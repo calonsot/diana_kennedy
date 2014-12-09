@@ -43,7 +43,7 @@ $flag=1;
 								else{
 									echo "<h3>Receta - ".$nombrereceta."<h3>";
 				               	    echo "<p>&nbsp;</p>";
-									echo "<iframe src='http://localhost/dianak/LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
+									echo "<iframe src='LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
 								}
 							?>
 							</div>	
