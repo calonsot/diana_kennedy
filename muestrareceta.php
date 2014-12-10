@@ -7,6 +7,9 @@ $flag=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 if(stristr($navigator_user_agent, "trident")){
+$URL = utf8_encode($URL);
+$nombrereceta = utf8_encode($nombrereceta);	
+$filtro = utf8_encode($filtro);
 $flag=1;
 }
 ?>
