@@ -1,7 +1,7 @@
 <?php 
 include('menu.php');
 $URL = $_GET["urlreceta"];
-$nombrereceta = $_GET["nombrereceta"];	
+$nombrereceta = htmlentities($_GET["nombrereceta"]);	
 $filtro =  isset($_GET["filtro"])? $_GET["filtro"]: "" ;
 $flag=0;
 
