@@ -1,5 +1,7 @@
 <?php 
 include('menu.php');
+header ('Content-type: text/html; charset=utf-8');
+
 $URL = $_GET["urlreceta"];
 $nombrereceta = htmlentities($_GET["nombrereceta"]);	
 $filtro = $_GET["filtro"];
@@ -7,11 +9,12 @@ $flag=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 if(stristr($navigator_user_agent, "trident")){
-$URL = utf8_encode($URL);
-$nombrereceta = utf8_encode($nombrereceta);	
-$filtro = utf8_encode($filtro);
+$URL = $URL;
+$nombrereceta = $nombrereceta;	
+$filtro = $filtro;
 $flag=1;
 }
+
 ?>
 			
 		<!-- Main -->
@@ -30,7 +33,7 @@ $flag=1;
 								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
 								//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
 								echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-		  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
+		  						echo "<p>Usted no tiene instalado el plugin. <a href='".$URL."'> Puede descargar la receta en formato PDF haciendo click en este link.</a></p>";
 		  						echo "</object>";
 								}
 								else{

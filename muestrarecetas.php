@@ -12,6 +12,7 @@ $nombrereceta = utf8_encode($nombrereceta);
 $filtro = utf8_encode($filtro);
 $flag=1;
 }
+
 ?>
 			
 		<!-- Main -->
@@ -33,7 +34,7 @@ $flag=1;
 				               		echo "<h3>Receta - ".$nombrereceta."<h3>";
 				               	    echo "<p>&nbsp;</p>";
 									echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-			  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
+			  						echo "<p>Usted no tiene instalado el plugin. <a href='".$URL."'> Puede descargar la receta en formato PDF haciendo click en este link.</a></p>";
 			  						echo "</object>";
 		  						}
 		  						else
