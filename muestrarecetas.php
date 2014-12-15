@@ -1,15 +1,18 @@
 <?php 
 include('menu.php');
+header ('Content-type: text/html; charset=utf-8');
+
 $URL = $_GET["urlreceta"];
 $nombrereceta = htmlentities($_GET["nombrereceta"]);	
 $filtro =  isset($_GET["filtro"])? $_GET["filtro"]: "" ;
+$id = $_GET["id"];
 $flag=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 if(stristr($navigator_user_agent, "trident")){
-$URL = utf8_encode($URL);
-$nombrereceta = utf8_encode($nombrereceta);	
-$filtro = utf8_encode($filtro);
+$URL = $URL;
+$nombrereceta = $nombrereceta;	
+$filtro = $filtro;
 $flag=1;
 }
 
@@ -52,7 +55,7 @@ $flag=1;
 						<div class='der2'>
 							<div class='micontenido2'>						
 							<?php															
-								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE recetanombre = '".$nombrereceta."'", $conexion);
+								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE id = ".$id, $conexion);
 								$listaingrediente = mysql_result($ingredientes,0);	
 								if (!empty($listaingrediente))
 								{
