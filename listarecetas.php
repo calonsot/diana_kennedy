@@ -4,7 +4,7 @@
 	header ('Content-type: text/html; charset=utf-8');
 	$filtro = isset($_GET["filtro"])? $_GET["filtro"]: "Publico = 1" ;
 	$filtro = str_replace("'", "\"", $filtro);			
-	$sql = "SELECT URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";	
+	$sql = "SELECT id, URL, recetanombre, publico, libro FROM diannakennedy WHERE ".$filtro." ORDER BY recetanombre";	
 	
 	//Conexión a la base de datos 
 	$con = $conexion; 	
@@ -26,7 +26,7 @@
 	$_pagi_conteo_alternativo = true;//recomendado false.
 	 
 	//Supongamos que sólo nos interesa propagar estas dos variables
-	$_pagi_propagar = array("URL","recetanombre", "publico", "libro");//No importa si son POST o GET
+	$_pagi_propagar = array("Id","URL","recetanombre", "publico", "libro");//No importa si son POST o GET
 	 
 	//Definimos qué estilo CSS se utilizará para los enlaces de paginación.
 	//El estilo debe estar definido previamente
@@ -72,9 +72,9 @@
 							echo "<div class='izq'>";
 							echo "<div class='micontenido'>";
 							if(!is_null($row['URL']))						
-								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."&id=".$row['id']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></span>";
 							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a></span>";
 							
 							if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";
@@ -90,9 +90,9 @@
 							echo "<div class='der'>";
 							echo "<div class='micontenido'>";
 							if(!is_null($row['URL']))						
-								echo "<a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a target='_blank' href='muestrareceta.php?urlreceta=".$row['URL']."&nombrereceta=".$row['recetanombre']."&filtro=".$filtro."&id=".$row['id']."'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']."</a></span>";
 							else
-								echo "<a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a>";
+								echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='46' height='46' alt='' />&nbsp;&nbsp;&nbsp;".$row['recetanombre']." - Próximamente</a></span>";
 						    
 						    if ($row['publico']==1)
 						    	echo "<p>&nbsp;&nbsp;&nbsp;Libro: ".$row['libro']."</p><br><br>";

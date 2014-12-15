@@ -1,17 +1,21 @@
 <?php 
 include('menu.php');
+header ('Content-type: text/html; charset=utf-8');
+
 $URL = $_GET["urlreceta"];
 $nombrereceta = $_GET["nombrereceta"];	
 $filtro =  isset($_GET["filtro"])? $_GET["filtro"]: "" ;
+$id = $_GET["id"];
 $flag=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 if(stristr($navigator_user_agent, "trident")){
-$URL = utf8_encode($URL);
-$nombrereceta = utf8_encode($nombrereceta);	
-$filtro = utf8_encode($filtro);
+$URL = $URL;
+$nombrereceta = $nombrereceta;	
+$filtro = $filtro;
 $flag=1;
 }
+
 ?>
 			
 		<!-- Main -->
@@ -33,7 +37,7 @@ $flag=1;
 				               		echo "<h3>Receta - ".$nombrereceta."<h3>";
 				               	    echo "<p>&nbsp;</p>";
 									echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-			  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
+			  						echo "<p>Usted no tiene instalado el plugin. <a href='".$URL."'> Puede descargar la receta en formato PDF haciendo click en este link.</a></p>";
 			  						echo "</object>";
 		  						}
 		  						else
@@ -43,7 +47,7 @@ $flag=1;
 								else{
 									echo "<h3>Receta - ".$nombrereceta."<h3>";
 				               	    echo "<p>&nbsp;</p>";
-									echo "<iframe src='http://localhost/dianak/LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
+									echo "<iframe src='LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
 								}
 							?>
 							</div>	
@@ -51,7 +55,7 @@ $flag=1;
 						<div class='der2'>
 							<div class='micontenido2'>						
 							<?php															
-								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE recetanombre = '".$nombrereceta."'", $conexion);
+								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE id = ".$id, $conexion);
 								$listaingrediente = mysql_result($ingredientes,0);	
 								if (!empty($listaingrediente))
 								{

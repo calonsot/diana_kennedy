@@ -11,6 +11,7 @@
 	$categoria = isset($_POST["categoria"])? $_POST["categoria"]: '-1';
 	$ingrediente = isset($_POST["ingrediente"])? $_POST["ingrediente"]: '-1';	
 	$URL = "";
+	$ID = "";
 	$_where = null;		
 
 	if ($nomreceta != "")
@@ -47,7 +48,7 @@
 	$_where = str_replace("%c", "c", $_where);
 	$_where = str_replace("%C", "C", $_where);
 
-	$sql = "SELECT URL, recetanombre FROM diannakennedy WHERE ".$_where." ORDER BY recetanombre";		
+	$sql = "SELECT id, URL, recetanombre FROM diannakennedy WHERE ".$_where." ORDER BY recetanombre";		
 	$consulta=mysql_query($sql, $conexion);							
 	$numRecetas =mysql_num_rows($consulta);	
 
@@ -59,7 +60,8 @@
 	{
 		$registro=mysql_fetch_array($consulta);
 		$URL = $registro["URL"];
+		$ID = $registro["id"];
 		$nombrereceta = $registro["recetanombre"];
-		header('Location: muestrarecetas.php?urlreceta='.$URL.'&nombrereceta='.$nombrereceta);
+		header('Location: muestrarecetas.php?urlreceta='.$URL.'&nombrereceta='.$nombrereceta.'&id='.$ID);
 	}
 ?>
