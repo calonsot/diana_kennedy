@@ -1,21 +1,25 @@
 <?php 
 include('menu.php');
-header ('Content-type: text/html; charset=utf-8');
-
 $URL = $_GET["urlreceta"];
 $nombrereceta = htmlentities($_GET["nombrereceta"]);	
 $filtro = $_GET["filtro"];
-$id = $_GET["id"];
 $flag=0;
+$cel=0;
 
 $navigator_user_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? strtolower($_SERVER['HTTP_USER_AGENT']):'';
 if(stristr($navigator_user_agent, "trident")){
-$URL = $URL;
-$nombrereceta = $nombrereceta;	
-$filtro = $filtro;
+$URL = utf8_encode($URL);
+$nombrereceta = utf8_encode($nombrereceta);	
+$filtro = utf8_encode($filtro);
 $flag=1;
 }
-
+if(stristr($navigator_user_agent, "android")||stristr($navigator_user_agent, "iphone")){
+//$URL = utf8_encode($URL);
+//$nombrereceta = utf8_encode($nombrereceta);	
+//$filtro = utf8_encode($filtro);
+$flag=1;
+$cel=1;
+}
 ?>
 			
 		<!-- Main -->
@@ -34,12 +38,17 @@ $flag=1;
 								//echo "<embed src='".$URL."' style='position:relative;top:10px;bottom:0px;'>";
 								//echo "<embed width='100' height='100' src='".$URL."' frameborder='0'></embed>";
 								echo "<object data='".$URL."' type='application/pdf' width='100' height='100'>";
-		  						echo "<p>Usted no tiene instalado el plugin. <a href='".$URL."'> Puede descargar la receta en formato PDF haciendo click en este link.</a></p>";
+		  						echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>.</a></p>";
 		  						echo "</object>";
 								}
 								else{
+									if($cel==1){
+										echo "<p>Usted no tiene instalado el plugin. Puede descargar la receta en formato PDF en <a href='".$URL."'>".$nombrereceta."</a></p>";
+									}
+									else{
 									echo "<iframe src='LibreriaPDF/web/viewer.php?url=".$URL."' width='678' height='678' frameborder=0 scrolling='no'></iframe>";
-								}
+								}}
+								
 							?>
 							</div>	
 						</div>
@@ -47,7 +56,7 @@ $flag=1;
 							<div class='micontenido2'>
 							<p><b>Otras recetas</b></p>
 							<?php															
-								$consultarec=mysql_query("SELECT URL, recetanombre, publico, id FROM diannakennedy WHERE ".$filtro." AND id <> ".$id." ORDER BY recetanombre LIMIT 5", $conexion);								
+								$consultarec=mysql_query("SELECT URL, recetanombre, publico FROM diannakennedy WHERE ".$filtro." AND recetanombre <> '".$nombrereceta."' ORDER BY recetanombre LIMIT 5", $conexion);								
 								$i = 1;
 								$j = 1;
 								while($registros=mysql_fetch_array($consultarec))
@@ -57,7 +66,7 @@ $flag=1;
 									{
 										if(!is_null($registros[0]))	
 										{																											
-											echo "<span style='white-space: pre-wrap;padding:0px;'><a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."&id=".$registros[3]."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."</a></span><br><br>";
+											echo "<span style='white-space: pre-wrap;padding:0px;'><a href='muestrareceta.php?urlreceta=".$registros[0]."&nombrereceta=".$registros[1]."&filtro=".$filtro."'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."</a></span><br><br>";
 										}
 										else
 											echo "<span style='white-space: pre-wrap;padding:0px;'><a href='#'><img src='images/thumb".$i.".jpg' width='30' height='30' alt='' /> ".$registros[1]."<br><span style='color:gray;'>Próximamente</span></a></span><br><br>";
@@ -67,10 +76,11 @@ $flag=1;
 								    	$i = 1;
 								}
 
+
 								
-								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE id = '".$id."'", $conexion);
+								$ingredientes = mysql_query("SELECT ingredientelocal FROM diannakennedy WHERE recetanombre = '".$nombrereceta."'", $conexion);
 								$listaingrediente = mysql_result($ingredientes,0);	
-								if (!empty($listaingrediente))	
+								if (!empty($listaingrediente))
 								{
 									echo "<br><p><b>Ingredientes</b></p>";									
 									$lista=explode(",", $listaingrediente);
